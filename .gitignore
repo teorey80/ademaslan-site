@@ -1,0 +1,7 @@
+# Netlify build/deploy artifacts
+.netlify/
+deploy-*.zip
+*.zip
+
+# OS
+.DS_Store
