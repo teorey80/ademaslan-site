@@ -1,15 +1,25 @@
-# NOT: /projeler/<slug>/index.html statik dosyaları (yayın paketi) Netlify
-# tarafından bu kuraldan ÖNCE sunulur. Bu kural yalnızca henüz statik sayfası
-# üretilmemiş YENİ projeler için dinamik yedek olarak çalışır.
-/projeler/:slug    /proje-detay.html    200
+# .html uzantılı URL'ler → temiz URL (301). Dosyalar diskte var olduğu için
+# Netlify'ın statik dosya önceliğini aşmak üzere "!" ile zorlanır; temiz URL
+# istekleri Netlify'ın pretty-URL çözümlemesiyle aynı dosyadan sunulmaya devam eder.
+/index.html             /                   301!
+/projeler.html          /projeler           301!
+/rehberler.html         /rehberler          301!
+/portfoy.html           /portfoy            301!
+/hakkimda.html          /hakkimda           301!
+/cekmekoy-rehberi.html  /cekmekoy-rehberi   301!
+/tasarim-sistemi.html   /tasarim-sistemi    301!
+/proje-detay.html       /proje-detay        301!
+/rehber-detay.html      /rehber-detay       301!
+/portfoy-detay.html     /portfoy-detay      301!
 
-# Eski statik proje sayfaları → dinamik versiyona yönlendir
-/birbahce-evleri        /projeler/birbahce-evleri   301
-/birbahce-evleri.html   /projeler/birbahce-evleri   301
+# Eski (silinmiş) statik proje sayfaları → yeni statik sayfalar
+/birbahce-evleri        /projeler/birbahce-evleri/   301
+/birbahce-evleri.html   /projeler/birbahce-evleri/   301
+/nef-camlitepe          /projeler/nef-camlitepe/     301
+/nef-camlitepe.html     /projeler/nef-camlitepe/     301
 
-/nef-camlitepe          /projeler/nef-camlitepe     301
-/nef-camlitepe.html     /projeler/nef-camlitepe     301
-
-# Rehber detay dinamik routing — /rehberler/<slug>/index.html statik dosyaları
-# Netlify tarafından bu kuraldan ÖNCE sunulur; bu kural yedektir.
-/rehberler/:slug    /rehber-detay.html    200
+# Dinamik yedekler: /projeler/<slug>/index.html ve /rehberler/<slug>/index.html
+# statik dosyaları bu kurallardan ÖNCE sunulur; kurallar yalnızca henüz statik
+# sayfası üretilmemiş YENİ içerikler için çalışır.
+/projeler/:slug     /proje-detay.html    200
+/rehberler/:slug    /rehber-detay.html   200
