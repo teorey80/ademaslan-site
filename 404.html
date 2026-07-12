@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light" data-accent="terracotta">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sayfa Bulunamadı (404) — Adem Aslan</title>
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/system.css" />
+<script>
+(function () {
+  try {
+    var r = document.documentElement;
+    r.dataset.theme = localStorage.getItem('aa-theme') || 'light';
+    r.dataset.accent = localStorage.getItem('aa-accent') || 'terracotta';
+  } catch (e) {}
+})();
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/" aria-label="Adem Aslan — Anasayfa">
+      <img src="/assets/logo-adem-aslan.png" alt="Adem Aslan" />
+    </a>
+    <nav class="nav-links" aria-label="Ana menü">
+      <a href="/rehberler">Rehberler</a>
+      <a href="/projeler">Proje İncelemeleri</a>
+      <a href="/portfoy">Portföy</a>
+      <a href="/hakkimda">Hakkımda</a>
+    </nav>
+  </div>
+</header>
+
+<main style="max-width:640px; margin:0 auto; padding:96px 24px; text-align:center;">
+  <p style="font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-muted); margin:0 0 12px;">404</p>
+  <h1 class="display" style="margin:0 0 16px;">Aradığınız sayfa bulunamadı</h1>
+  <p style="color:var(--ink-muted); margin:0 0 32px;">Sayfa taşınmış ya da adres yanlış yazılmış olabilir. Aşağıdaki bağlantılardan devam edebilirsiniz.</p>
+  <p style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+    <a class="btn btn-primary" href="/">Anasayfa</a>
+    <a class="btn" href="/rehberler">Rehberler</a>
+    <a class="btn" href="/projeler">Proje İncelemeleri</a>
+    <a class="btn" href="/portfoy">Portföy</a>
+  </p>
+</main>
+
+</body>
+</html>
