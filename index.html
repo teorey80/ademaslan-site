@@ -5,16 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Adem Aslan — Çekmeköy & Alemdağ Gayrimenkul Rehberi</title>
 <meta name="description" content="Çekmeköy, Alemdağ ve Fikirtepe gayrimenkul piyasası üzerine bağımsız bölge rehberleri, proje incelemeleri ve aktif portföy. Adem Aslan ile doğru kararı verin." />
-<link rel="canonical" href="https://ademaslan.com/" />
 <meta property="og:title" content="Adem Aslan — Çekmeköy & Alemdağ Gayrimenkul Rehberi" />
 <meta property="og:description" content="Bölge rehberleri, proje incelemeleri ve güncel portföy. Çekmeköy ve Alemdağ'da ev ararken güvenilir kaynak." />
-<meta property="og:image" content="https://ademaslan.com/assets/logo-adem-aslan.png" />
+<meta property="og:image" content="assets/logo-adem-aslan.png" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://ademaslan.com/" />
-<meta property="og:site_name" content="Adem Aslan — Çekmeköy Gayrimenkul" />
-<meta property="og:locale" content="tr_TR" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://ademaslan.com/assets/logo-adem-aslan.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;540;600;700&display=swap" rel="stylesheet" />
@@ -37,11 +31,14 @@
   "name": "Adem Aslan Gayrimenkul Danışmanı",
   "areaServed": ["Çekmeköy", "Alemdağ", "Fikirtepe", "İstanbul"],
   "knowsAbout": ["Çekmeköy gayrimenkul", "Alemdağ konut", "Nef Çamlıtepe", "Emlak Konut projeleri", "arsa yatırımı"],
-  "url": "https://ademaslan.com/",
-  "image": "https://ademaslan.com/assets/logo-adem-aslan.png",
-  "telephone": "+90-532-207-40-87",
-  "address": { "@type": "PostalAddress", "addressLocality": "Çekmeköy", "addressRegion": "İstanbul", "addressCountry": "TR" },
-  "sameAs": ["https://instagram.com/ademaslan.official", "https://youtube.com/@ademaslan80"]
+  "url": "https://ademaslan.com",
+  "image": "assets/logo-adem-aslan.png",
+  "sameAs": [
+    "https://instagram.com/ademaslan.official",
+    "https://youtube.com/@ademaslan80",
+    "https://tiktok.com/@ademaslan.-",
+    "https://www.threads.net/@ademaslan.official"
+  ]
 }
 </script>
 
@@ -53,6 +50,13 @@
 .hero-portrait img{width:100%;height:auto;max-width:520px;display:block;margin-left:auto;filter:drop-shadow(0 22px 28px rgba(26,26,26,.14)) drop-shadow(0 6px 10px rgba(26,26,26,.08))}
 .hero-portrait::after{content:"";position:absolute;left:5%;right:0;bottom:-8px;height:60px;background:radial-gradient(ellipse at center,rgba(184,92,63,.10),transparent 70%);z-index:-1;filter:blur(8px)}
 
+/* Sosyal ikon şeridi — portrenin altında */
+.hero-social{display:flex;align-items:center;justify-content:center;gap:12px;max-width:520px;margin:24px 0 0 auto}
+.hero-social a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--accent-tint-2);color:var(--accent);border:1px solid var(--accent-line);transition:background .22s ease,color .22s ease,transform .22s ease,box-shadow .22s ease}
+.hero-social a:hover{background:var(--accent);color:var(--accent-ink);transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.hero-social svg{width:20px;height:20px}
+.hero-social .hs-label{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted);margin-right:6px}
+
 .hero-proof{display:flex;flex-wrap:wrap;gap:32px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
 .hero-proof .p{display:flex;flex-direction:column;gap:3px}
 .hero-proof .n{font-family:var(--serif);font-size:1.55rem;font-weight:500;color:var(--ink);line-height:1}
@@ -62,6 +66,7 @@
   .hero-grid{grid-template-columns:1fr;gap:36px}
   .hero-portrait{order:-1}
   .hero-portrait img{max-width:340px;margin:0 auto}
+  .hero-social{margin:18px auto 0}
   .hero-proof{gap:20px}
   .hero-proof .n{font-size:1.3rem}
 }
@@ -72,16 +77,16 @@
 <!-- ======================== NAV ======================== -->
 <header class="nav">
   <div class="nav-inner">
-    <a class="nav-logo" href="/" aria-label="Adem Aslan — Anasayfa">
+    <a class="nav-logo" href="index.html" aria-label="Adem Aslan — Anasayfa">
       <img src="assets/logo-adem-aslan.png" alt="Adem Aslan" />
     </a>
     <nav class="nav-links" aria-label="Ana menü">
-      <a href="/rehberler">Rehberler</a>
+      <a href="rehberler.html">Rehberler</a>
       <a href="/rehberler?kategori=bolge">Bölge Rehberleri</a>
-      <a href="/projeler">Proje İncelemeleri</a>
-      <a href="/portfoy">Portföy</a>
+      <a href="projeler.html">Proje İncelemeleri</a>
+      <a href="portfoy.html">Portföy</a>
       <a href="#sorular">Soru-Cevap</a>
-      <a href="/hakkimda">Hakkımda</a>
+      <a href="hakkimda.html">Hakkımda</a>
     </nav>
     <div class="nav-right">
       <button class="icon-btn" data-theme-toggle aria-label="Tema değiştir">
@@ -153,6 +158,21 @@
 
     <aside class="hero-portrait reveal">
       <img src="assets/adem-aslan-portre-seffaf.png" alt="Adem Aslan — Çekmeköy ve Alemdağ Gayrimenkul Danışmanı" loading="eager" fetchpriority="high" />
+      <div class="hero-social" aria-label="Sosyal medya hesapları">
+        <span class="hs-label">Takipte kalın</span>
+        <a href="https://instagram.com/ademaslan.official" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram — @ademaslan.official">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="0.7" fill="currentColor" stroke="none"></circle></svg>
+        </a>
+        <a href="https://youtube.com/@ademaslan80" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube — @ademaslan80">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"></rect><path d="m10.3 9.2 4.9 2.8-4.9 2.8z" fill="currentColor"></path></svg>
+        </a>
+        <a href="https://tiktok.com/@ademaslan.-" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok — @ademaslan.-">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 11.6a4.3 4.3 0 1 0 4.3 4.3V3.5c.5 2.7 2.3 4.6 5.2 5"></path></svg>
+        </a>
+        <a href="https://www.threads.net/@ademaslan.official" target="_blank" rel="noopener" aria-label="Threads" title="Threads — @ademaslan.official">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"></path></svg>
+        </a>
+      </div>
     </aside>
     </div><!-- /.hero-grid -->
   </div>
@@ -222,7 +242,7 @@
         <span class="btn btn-ghost" style="padding:0;">Rehberleri keşfet <span class="arrow">→</span></span>
       </a>
       <!-- Proje incelemeleri -->
-      <a class="card clickable reveal" href="/projeler" style="padding:30px;">
+      <a class="card clickable reveal" href="projeler.html" style="padding:30px;">
         <div style="width:48px;height:48px;border-radius:12px;background:var(--accent-tint-2);color:var(--accent);display:grid;place-items:center;margin-bottom:20px;">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg>
         </div>
@@ -231,7 +251,7 @@
         <span class="btn btn-ghost" style="padding:0;">İncelemeleri oku <span class="arrow">→</span></span>
       </a>
       <!-- Aktif portföy -->
-      <a class="card clickable reveal" href="/portfoy" style="padding:30px;">
+      <a class="card clickable reveal" href="portfoy.html" style="padding:30px;">
         <div style="width:48px;height:48px;border-radius:12px;background:var(--accent-tint-2);color:var(--accent);display:grid;place-items:center;margin-bottom:20px;">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5V21H3V9.5Z"/><path d="M9 21v-7h6v7"/></svg>
         </div>
@@ -255,7 +275,7 @@
     </div>
 
     <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:26px;">
-      <a class="card reveal" href="/rehberler/tapu-takyidat-sorgulama/">
+      <a class="card reveal" href="/rehberler/tapu-takyidat-sorgulama">
       <div class="ph has-img"><img src="https://i.ytimg.com/vi/XJ3XFcFje1c/hqdefault.jpg" alt="Tapuda Gizli Tehlike: Haciz, İpotek ve Tedbir Nasıl Sorgulanır?" /></div>
         <div class="card-body">
           <span class="card-cat">Bilgi Rehberi</span>
@@ -264,7 +284,7 @@
           <div class="card-meta"><span>4 dk okuma</span><span class="dot"></span><span>10 Temmuz 2026</span></div>
         </div>
       </a>
-      <a class="card reveal" href="/rehberler/tapu-kilitleme-web-tapu/">
+      <a class="card reveal" href="/rehberler/tapu-kilitleme-web-tapu">
       <div class="ph has-img"><img src="https://i.ytimg.com/vi/2wML5VN57ao/hqdefault.jpg" alt="e-Devlet Tapu Kilitleme Nasıl Yapılır? Web Tapu ile Sahte Vekalet Dolandırıcılığına Karşı Mülkünüzü Koruyun" /></div>
         <div class="card-body">
           <span class="card-cat">Bilgi Rehberi</span>
@@ -273,7 +293,7 @@
           <div class="card-meta"><span>5 dk okuma</span><span class="dot"></span><span>28 Haziran 2026</span></div>
         </div>
       </a>
-      <a class="card reveal" href="/rehberler/rayic-bedel-sorgulama/">
+      <a class="card reveal" href="/rehberler/rayic-bedel-sorgulama">
       <div class="ph has-img"><img src="https://i.ytimg.com/vi/zGGOZTb2xDI/hqdefault.jpg" alt="Rayiç Bedel Nedir, e-Devlet'ten Nasıl Sorgulanır? Adım Adım Rehber" /></div>
         <div class="card-body">
           <span class="card-cat">Bilgi Rehberi</span>
@@ -291,7 +311,7 @@
           <div class="card-meta"><span>14 dk okuma</span><span class="dot"></span><span>3 Haziran 2026</span></div>
         </div>
       </a>
-      <a class="card reveal" href="/rehberler/enerji-kimlik-belgesi-sorgulama/">
+      <a class="card reveal" href="/rehberler/enerji-kimlik-belgesi-sorgulama">
       <div class="ph has-img"><img src="https://res.cloudinary.com/dqrf9irup/image/upload/v1781603968/guides/ruerx9gjbra4larp6qeg.png" alt="Enerji Kimlik Belgesi (EKB) Nasıl Sorgulanır? e-Devlet ile Adım Adım" /></div>
         <div class="card-body">
           <span class="card-cat">Bilgi Rehberi</span>
@@ -300,6 +320,55 @@
           <div class="card-meta"><span>6 dk okuma</span><span class="dot"></span><span>16 Haziran 2026</span></div>
         </div>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== BİLGİ KARTLARI (Instagram / Threads) ======================== -->
+<section class="section" style="padding-bottom:0;">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">Instagram · Threads</p>
+        <h2 style="margin-top:12px;">Bilgi kartları</h2>
+      </div>
+      <a href="https://instagram.com/ademaslan.official" target="_blank" rel="noopener" class="btn btn-ghost">@ademaslan.official <span class="arrow">→</span></a>
+    </div>
+
+    <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:26px;">
+      <a class="card reveal" href="https://www.instagram.com/p/Damyg5FAMWz/" target="_blank" rel="noopener">
+        <div class="ph has-img" style="aspect-ratio:4/5;border:0;">
+          <img src="assets/ig-tapuda-guvenli-odeme.jpg" alt="Tapuda Güvenli Ödeme Ertelendi — Instagram bilgi kartı" loading="lazy" />
+          <span class="ig-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 4H6a2 2 0 0 0-2 2v10"></path></svg></span>
+        </div>
+        <div class="card-body">
+          <span class="card-cat">Instagram Carousel</span>
+          <h3 class="card-title" style="font-size:1.2rem;">Tapuda Güvenli Ödeme Ertelendi</h3>
+          <div class="card-meta"><span>Kaydırmalı bilgi kartı</span></div>
+        </div>
+      </a>
+      <a class="card reveal" href="https://www.instagram.com/p/DaFHPrugOZi/" target="_blank" rel="noopener">
+        <div class="ph has-img" style="aspect-ratio:4/5;border:0;">
+          <img src="assets/ig-tapu-satisi-10-hata.jpg" alt="Tapu Satışında Yapılan 10 Büyük Hata — Instagram bilgi kartı" loading="lazy" />
+          <span class="ig-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 4H6a2 2 0 0 0-2 2v10"></path></svg></span>
+        </div>
+        <div class="card-body">
+          <span class="card-cat">Instagram Carousel</span>
+          <h3 class="card-title" style="font-size:1.2rem;">Tapu Satışında Yapılan 10 Büyük Hata</h3>
+          <div class="card-meta"><span>Kaydırmalı bilgi kartı</span></div>
+        </div>
+      </a>
+      <div class="card reveal" style="background:var(--accent-tint);border-color:var(--accent-line);align-items:center;justify-content:center;text-align:center;padding:36px 28px;gap:0;">
+        <div style="width:56px;height:56px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;margin-bottom:18px;">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="0.7" fill="currentColor" stroke="none"></circle></svg>
+        </div>
+        <h3 class="card-title" style="font-size:1.3rem;">Yeni kartları kaçırmayın</h3>
+        <p class="card-excerpt" style="margin:10px 0 22px;max-width:26ch;">Tapu, satış ve bölge üzerine bilgilendirici carousel'ler Instagram ve Threads'te.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+          <a href="https://instagram.com/ademaslan.official" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Instagram</a>
+          <a href="https://www.threads.net/@ademaslan.official" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Threads</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -421,7 +490,7 @@
       <h5>İçerik tipleri</h5>
       <ul>
         <li><a href="/rehberler?kategori=bolge">Bölge Rehberleri</a></li>
-        <li><a href="/projeler">Proje İncelemeleri</a></li>
+        <li><a href="projeler.html">Proje İncelemeleri</a></li>
         <li><a href="/rehberler?kategori=alici">Alıcı Rehberleri</a></li>
         <li><a href="#sorular">Soru-Cevap</a></li>
       </ul>
@@ -442,6 +511,7 @@
         <li><a href="tel:+905322074087">+90 532 207 40 87</a></li>
         <li><a href="https://wa.me/905322074087" target="_blank" rel="noopener">WhatsApp</a></li>
         <li><a href="https://instagram.com/ademaslan.official" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.threads.net/@ademaslan.official" target="_blank" rel="noopener">Threads</a></li>
         <li><a href="https://youtube.com/@ademaslan80" target="_blank" rel="noopener">YouTube</a></li>
         <li><a href="https://tiktok.com/@ademaslan.-" target="_blank" rel="noopener">TikTok</a></li>
         <li><a href="mailto:teorey@gmail.com">teorey@gmail.com</a></li>
@@ -450,7 +520,7 @@
   </div>
   <div class="footer-bottom">
     <span>© 2026 Adem Aslan Gayrimenkul Danışmanlığı</span>
-    <span><a href="/tasarim-sistemi" class="link-u">Tasarım Sistemi →</a></span>
+    <span><a href="tasarim-sistemi.html" class="link-u">Tasarım Sistemi →</a></span>
   </div>
 </footer>
 
@@ -462,6 +532,10 @@
     background:color-mix(in srgb, var(--accent) 92%, #000); display:grid; place-items:center; box-shadow:var(--shadow-md); }
   .play-badge::after { content:""; width:0; height:0; border-style:solid; border-width:11px 0 11px 18px;
     border-color:transparent transparent transparent var(--accent-ink); margin-left:4px; }
+  .ig-badge { position:absolute; top:12px; right:12px; width:34px; height:34px; border-radius:50%;
+    background:rgba(20,18,12,.5); color:#fff; display:grid; place-items:center;
+    backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px); }
+  .ig-badge svg { width:17px; height:17px; }
   .nav-links.open { display:flex; position:absolute; top:72px; left:0; right:0; flex-direction:column; gap:0;
     background:var(--bg); border-bottom:1px solid var(--line); padding:8px 0; }
   .nav-links.open a { padding:14px 32px; }
