@@ -1,3 +1,16 @@
 [build]
   publish = "."
   command = ""
+
+# Statik rehber klasörleri (rehberler/<slug>/index.html) her zaman önceliklidir.
+# Bu yönlendirmeler yalnızca statik dosya YOKSA devreye girer (force=false varsayılan)
+# ve Supabase'e eklenen yeni içeriklerin dinamik sayfada açılmasını sağlar.
+[[redirects]]
+  from = "/rehberler/*"
+  to = "/rehber-detay.html"
+  status = 200
+
+[[redirects]]
+  from = "/projeler/*"
+  to = "/proje-detay.html"
+  status = 200
