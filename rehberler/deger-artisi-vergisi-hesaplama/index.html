@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Değer Artışı Kazancı Vergisi Hesaplama (2024-2026) — Ev Satışında Vergi Çıkar mı? | Adem Aslan</title>
+<meta name="description" content="Gayrimenkul satışında değer artışı kazancı vergisi hesaplama aracı. Alış-satış tarihi ve bedellerini girin; 5 yıl kuralı, Yİ-ÜFE endekslemesi ve istisna sonrası vergi çıkıp çıkmadığını anında görün.">
+<link rel="canonical" href="https://ademaslan.com/rehberler/deger-artisi-vergisi-hesaplama">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Değer Artışı Kazancı Vergisi Hesaplama — Ev Satışında Vergi Çıkar mı?">
+<meta property="og:description" content="Alış ve satış tarihini, fiyatları girin; GİB yöntemine göre (Yİ-ÜFE endeksleme + istisna + tarife) verginizi anında hesaplayın.">
+<meta property="og:url" content="https://ademaslan.com/rehberler/deger-artisi-vergisi-hesaplama">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   ademaslan.com — Proje Detay (v18, self-contained)
+   Tasarım Sistemi v1.0: Newsreader + Inter, krem/antrasit,
+   aksan: terracotta #B85C3F (site geneli ile uyumlu)
+   ============================================================ */
+:root{
+  --bg:#FBFAF7; --sunken:#F3EFE7; --surface:#FFFFFF;
+  --ink:#1A1A1A; --soft-ink:#4A4843; --muted:#76736B;
+  --accent:#B85C3F;
+  --accent-dark:#9d4c32;
+  --accent-tint:rgba(184,92,63,.14);
+  --accent-soft:rgba(184,92,63,.09);
+  --accent-line:rgba(184,92,63,.35);
+  --line:#E5E0D5;
+  --wa:#25D366;
+  --serif:'Newsreader',Georgia,serif;
+  --sans:'Inter',-apple-system,sans-serif;
+  --mono:ui-monospace,'SF Mono',Menlo,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+img[src*="adem-aslan-portre"]{object-fit:cover;object-position:50% 10%}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+
+/* ---------- Header ---------- */
+.site-header{background:var(--bg);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo img{height:40px;width:auto}
+.nav{display:flex;gap:28px;align-items:center}
+.nav a{color:var(--soft-ink);font-size:14.5px;font-weight:500}
+.nav a:hover{color:var(--accent);text-decoration:none}
+.btn{display:inline-block;font-family:var(--sans);font-weight:600;font-size:14.5px;border-radius:8px;padding:11px 22px;cursor:pointer;border:1.5px solid transparent;transition:all .18s ease;text-align:center}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-dark);color:#fff}
+.btn-secondary{background:transparent;color:var(--accent);border-color:var(--accent-line)}
+.btn-secondary:hover{border-color:var(--accent);background:var(--accent-soft)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{color:#fff;background:#1fb858}
+.btn-block{display:block;width:100%}
+@media(max-width:860px){.nav{display:none}}
+
+/* ---------- Tipografi ---------- */
+.eyebrow{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.mono{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+h1.display{font-family:var(--serif);font-weight:500;font-size:clamp(2.1rem,4.4vw,3.4rem);line-height:1.12;letter-spacing:-.018em}
+h2.section-title{font-family:var(--serif);font-weight:500;font-size:clamp(1.6rem,2.6vw,2.1rem);letter-spacing:-.01em;line-height:1.2}
+.lead{font-size:1.18rem;line-height:1.6;color:var(--soft-ink)}
+.prose{max-width:68ch;color:var(--soft-ink)}
+.prose strong{color:var(--ink)}
+.prose p+p{margin-top:1em}
+
+/* ---------- Breadcrumb / hero ---------- */
+.breadcrumb{padding:22px 0 0;font-size:13.5px;color:var(--muted)}
+.breadcrumb a{color:var(--muted)}
+.breadcrumb a:hover{color:var(--accent)}
+.article-head{padding:26px 0 8px}
+.author-strip{display:flex;align-items:center;gap:14px;margin-top:22px;flex-wrap:wrap}
+.author-strip img{width:46px;height:46px;border-radius:50%;object-fit:cover}
+.author-strip .name{font-weight:600;font-size:14.5px}
+.author-strip .role{font-size:13px;color:var(--muted)}
+.author-strip .sep{color:var(--line)}
+.hero-figure{margin:30px 0 0;border-radius:14px;overflow:hidden;background:var(--sunken)}
+.hero-figure img{width:100%;aspect-ratio:16/8.2;object-fit:cover}
+
+/* ---------- Layout: içerik + sidebar ---------- */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:56px;padding:44px 0 70px}
+@media(max-width:980px){.layout{grid-template-columns:1fr;gap:36px}}
+.sidebar{position:relative}
+.sticky{position:sticky;top:96px;display:flex;flex-direction:column;gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{font-family:var(--serif);font-weight:500;font-size:1.18rem;margin-bottom:14px}
+.facts{list-style:none;display:flex;flex-direction:column;gap:0}
+.facts li{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.facts li:last-child{border-bottom:0}
+.facts .k{color:var(--muted)}
+.facts .v{font-weight:500;text-align:right}
+.pill{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 11px;border-radius:99px;background:var(--accent-tint);color:var(--accent)}
+.toc{list-style:none;display:flex;flex-direction:column;gap:2px}
+.toc a{display:block;padding:7px 10px;border-radius:7px;font-size:14px;color:var(--soft-ink)}
+.toc a:hover{background:var(--accent-soft);color:var(--accent);text-decoration:none}
+
+/* ---------- Bölümler ---------- */
+.section{margin-top:54px}
+.section-kicker{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+.section-kicker .num{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.1em}
+.section-kicker .tag{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.section .section-title{margin-bottom:16px}
+
+/* Hızlı cevap */
+.quick-answer{background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;padding:24px 26px;margin-top:36px}
+.quick-answer .qa-label{font-size:12px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.quick-answer p{color:var(--soft-ink)}
+.note{font-size:13.5px;color:var(--muted);margin-top:14px;font-style:italic}
+
+/* Mesafe barları */
+.distances{display:flex;flex-direction:column;gap:13px;margin-top:18px;max-width:620px}
+.dist-row .dist-top{display:flex;justify-content:space-between;font-size:14px;margin-bottom:5px}
+.dist-row .dist-top .lbl{color:var(--soft-ink)}
+.dist-row .dist-top .val{font-family:var(--mono);font-size:12px;color:var(--accent)}
+.dist-bar{height:6px;background:var(--sunken);border-radius:99px;overflow:hidden}
+.dist-bar i{display:block;height:100%;background:var(--accent);border-radius:99px}
+
+/* Tablo */
+.table-wrap{overflow-x:auto;margin-top:18px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table.units{width:100%;border-collapse:collapse;font-size:14.5px;min-width:560px}
+table.units th{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:left;padding:13px 18px;border-bottom:1px solid var(--line);background:var(--sunken)}
+table.units td{padding:13px 18px;border-bottom:1px solid var(--line);color:var(--soft-ink);vertical-align:top}
+table.units tr:last-child td{border-bottom:0}
+table.units td:first-child{font-weight:600;color:var(--ink);font-family:var(--serif);font-size:15.5px;white-space:nowrap}
+
+/* Artı / eksi */
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:18px}
+@media(max-width:720px){.pros-cons{grid-template-columns:1fr}}
+.pc-col{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.pc-col h4{font-family:var(--serif);font-weight:500;font-size:1.12rem;margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.pc-col ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.pc-col li{display:flex;gap:11px;font-size:14.5px;color:var(--soft-ink);line-height:1.55}
+.pc-col li::before{flex:none;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-top:2px}
+.pc-pros li::before{content:"+";background:rgba(34,110,68,.12);color:#226E44}
+.pc-cons li::before{content:"−";background:rgba(184,92,63,.13);color:#B85C3F}
+.pc-pros h4 .dot{width:9px;height:9px;border-radius:50%;background:#226E44}
+.pc-cons h4 .dot{width:9px;height:9px;border-radius:50%;background:#B85C3F}
+
+/* Kimler için */
+.profiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+.profile{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px}
+.profile .fit{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;display:inline-block;padding:3px 10px;border-radius:99px;margin-bottom:11px}
+.profile .fit.yes{background:rgba(34,110,68,.12);color:#226E44}
+.profile .fit.no{background:rgba(184,92,63,.13);color:#B85C3F}
+.profile h4{font-family:var(--serif);font-weight:500;font-size:1.08rem;margin-bottom:7px}
+.profile p{font-size:13.8px;color:var(--soft-ink);line-height:1.55}
+
+/* İstatistik şeridi */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-top:20px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px;text-align:center}
+.stat .n{font-family:var(--serif);font-weight:500;font-size:1.7rem;color:var(--accent);line-height:1.1}
+.stat .l{font-size:12.5px;color:var(--muted);margin-top:7px;line-height:1.4}
+
+/* Ödeme planı */
+.plan{display:flex;flex-direction:column;gap:0;margin-top:20px;max-width:640px}
+.plan-step{display:flex;gap:18px;padding:16px 0;border-bottom:1px dashed var(--line);align-items:flex-start}
+.plan-step:last-child{border-bottom:0}
+.plan-step .num{flex:none;width:38px;height:38px;border-radius:50%;background:var(--accent-tint);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px}
+.plan-step .label{font-weight:600;font-size:15px}
+.plan-step .sub{font-size:13.5px;color:var(--muted);margin-top:2px}
+.plan-step .pct{margin-left:auto;font-family:var(--serif);font-weight:500;font-size:1.25rem;color:var(--accent);white-space:nowrap}
+
+/* Adem'in görüşü */
+.opinion{display:flex;gap:20px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;margin-top:20px}
+.opinion img{flex:none;width:62px;height:62px;border-radius:50%;object-fit:cover}
+.opinion .who{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.opinion .where{font-size:12.5px;color:var(--muted);margin-bottom:10px}
+.opinion blockquote{font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.22rem;line-height:1.5;color:var(--ink)}
+@media(max-width:560px){.opinion{flex-direction:column}}
+
+/* CTA */
+.cta{background:var(--accent);border-radius:18px;padding:38px;margin-top:56px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.cta img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.35)}
+.cta .cta-body{flex:1;min-width:240px}
+.cta h3{font-family:var(--serif);font-weight:500;font-size:1.5rem;color:#fff;margin-bottom:8px}
+.cta p{color:rgba(255,255,255,.82);font-size:14.5px;line-height:1.6}
+.cta .cta-actions{display:flex;gap:12px;flex-wrap:wrap}
+.cta .btn-light{background:#fff;color:var(--accent)}
+.cta .btn-light:hover{background:var(--sunken);color:var(--accent)}
+
+/* SSS */
+.faq{margin-top:18px;border:1px solid var(--line);border-radius:14px;background:var(--surface);overflow:hidden}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:last-child{border-bottom:0}
+.faq summary{cursor:pointer;list-style:none;padding:18px 22px;font-weight:600;font-size:15px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--serif);font-size:1.3rem;color:var(--accent);flex:none;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .faq-a{padding:0 22px 20px;font-size:14.5px;color:var(--soft-ink);max-width:68ch}
+
+/* Galeri & video */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:18px}
+.gallery figure{border-radius:12px;overflow:hidden;background:var(--sunken)}
+.gallery img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.gallery figcaption{font-size:12.5px;color:var(--muted);padding:8px 4px 0}
+.video-embed{margin-top:18px;border-radius:14px;overflow:hidden;aspect-ratio:16/9;background:var(--sunken)}
+.video-embed iframe{width:100%;height:100%;border:0}
+
+/* ---------- Yükleniyor / hata ---------- */
+#loading{padding:90px 24px;text-align:center}
+#loading .spin{width:34px;height:34px;border:3px solid var(--accent-tint);border-top-color:var(--accent);border-radius:50%;margin:0 auto 18px;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+#loading p{color:var(--muted);font-size:14.5px}
+#error{display:none;padding:90px 24px;text-align:center}
+#error h2{font-family:var(--serif);font-weight:500;font-size:1.8rem;margin-bottom:12px}
+#error p{color:var(--muted);margin-bottom:24px}
+#article{display:none}
+[hidden]{display:none!important}
+
+/* ---------- Footer ---------- */
+.site-footer{background:var(--sunken);border-top:1px solid var(--line);margin-top:80px;padding:54px 0 30px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+@media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
+.site-footer img.flogo{height:38px;margin-bottom:14px}
+.site-footer p{font-size:14px;color:var(--muted);max-width:30ch}
+.site-footer h5{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--soft-ink);margin-bottom:14px}
+.site-footer ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.site-footer ul a{color:var(--muted);font-size:14px}
+.site-footer ul a:hover{color:var(--accent)}
+.footer-bottom{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* Rehber bölümü ek bileşenleri */
+.cat-pill{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 11px;border-radius:99px;background:var(--accent-tint);color:var(--accent)}
+.tldr{background:var(--surface);border:1px solid var(--accent-line);border-radius:14px;padding:24px 26px;margin-top:30px}
+.tldr .qa-label{font-size:12px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.tldr ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.tldr li{display:flex;gap:11px;font-size:15px;color:var(--soft-ink);line-height:1.55}
+.tldr li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-top:9px}
+.guide-body{max-width:68ch;color:var(--soft-ink);font-size:17px;line-height:1.75}
+.guide-body h2,.guide-body h3{font-family:var(--serif);color:var(--ink);font-weight:500;margin:1.4em 0 .5em;line-height:1.25}
+.guide-body h2{font-size:1.5rem}.guide-body h3{font-size:1.25rem}
+.guide-body p{margin:0 0 1em}.guide-body ul,.guide-body ol{margin:0 0 1em 1.3em;display:flex;flex-direction:column;gap:.4em}
+.guide-body strong{color:var(--ink)}.guide-body a{color:var(--accent)}
+.related{margin-top:26px;border:1px solid var(--line);border-radius:14px;background:var(--surface);padding:22px 24px}
+.related h3{font-family:var(--serif);font-weight:500;font-size:1.1rem;margin-bottom:12px}
+.related ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.related a{font-size:14.5px;font-weight:500}
+.authorcard .who-row{display:flex;align-items:center;gap:13px;margin-bottom:14px}
+.authorcard img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:50% 10%}
+.authorcard .who-name{font-weight:600;font-size:15px}
+.authorcard .who-role{font-size:12.5px;color:var(--muted)}
+.authorcard p{font-size:13.6px;color:var(--soft-ink);line-height:1.6}
+.authorcard ul{list-style:none;margin:12px 0 0;display:flex;flex-direction:column;gap:7px}
+.authorcard ul li{font-size:13.2px;color:var(--soft-ink);display:flex;gap:9px}
+.authorcard ul li::before{content:"\2713";color:var(--accent);font-weight:700;flex:none}
+.authorcard a.more{display:inline-block;margin-top:14px;font-size:13.5px;font-weight:600;color:var(--accent)}
+/* Liste */
+.guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px;margin-top:8px}
+.guide-card{display:block;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .15s ease,box-shadow .15s ease}
+.guide-card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.07);text-decoration:none}
+.gc-media{aspect-ratio:16/9;background:var(--sunken);overflow:hidden}
+.gc-media img{width:100%;height:100%;object-fit:cover}
+.gc-body{padding:20px}
+.gc-body h3{font-family:var(--serif);font-weight:500;font-size:1.2rem;color:var(--ink);margin:8px 0 6px;line-height:1.25}
+.gc-body p{font-size:14px;color:var(--muted);line-height:1.5}
+.gc-meta{margin-top:14px;font-family:var(--mono);font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.cat-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 6px}
+.cat-tabs button{font-family:var(--sans);font-size:13.5px;font-weight:500;padding:8px 16px;border-radius:99px;border:1px solid var(--line);background:var(--surface);color:var(--soft-ink);cursor:pointer}
+.cat-tabs button[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+.list-lead{max-width:62ch;color:var(--soft-ink);font-size:1.12rem;line-height:1.6}
+</style>
+<style>
+/* ---------- Hesaplama Aracı ---------- */
+.calc-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;margin-top:26px}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px}
+@media(max-width:640px){.calc-grid{grid-template-columns:1fr}}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--soft-ink);margin-bottom:7px}
+.field .hint{font-weight:400;color:var(--muted);font-size:12px}
+.field input,.field select{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:9px;font-family:var(--sans);font-size:15.5px;color:var(--ink);background:var(--bg);outline:none;transition:border-color .15s}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.field.full{grid-column:1/-1}
+.calc-actions{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.result{margin-top:26px;display:none}
+.verdict{border-radius:14px;padding:22px 24px;border:1.5px solid}
+.verdict.ok{background:#f0f7f0;border-color:#bcd9bc}
+.verdict.tax{background:var(--accent-soft);border-color:var(--accent-line)}
+.verdict.warn{background:#fdf6ec;border-color:#ecd9b0}
+.verdict .v-label{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.verdict .v-main{font-family:var(--serif);font-size:clamp(1.4rem,3vw,1.9rem);line-height:1.25;margin-top:6px}
+.verdict .v-sub{font-size:14.5px;color:var(--soft-ink);margin-top:8px}
+.breakdown{margin-top:18px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:6px 24px}
+.breakdown h4{font-family:var(--serif);font-weight:500;font-size:1.1rem;padding:16px 0 6px}
+.breakdown ul{list-style:none}
+.breakdown li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.breakdown li:last-child{border-bottom:0}
+.breakdown .k{color:var(--muted)}
+.breakdown .v{font-weight:500;text-align:right;white-space:nowrap}
+.breakdown li.total{border-top:1.5px solid var(--line);border-bottom:0}
+.breakdown li.total .k,.breakdown li.total .v{font-weight:600;color:var(--ink)}
+.smallnote{font-size:13px;color:var(--muted);margin-top:14px;line-height:1.6}
+.err{display:none;margin-top:16px;background:#fdeeec;border:1.5px solid #e8b8b0;border-radius:10px;padding:14px 18px;font-size:14.5px;color:#8a3324}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="/"><img src="/assets/logo-adem-aslan.png" alt="Adem Aslan"></a>
+    <nav class="nav">
+      <a href="/rehberler">Rehberler</a>
+      <a href="/projeler">Proje İncelemeleri</a>
+      <a href="/portfoy">Portföy</a>
+      <a href="/#sorular">Soru-Cevap</a>
+      <a href="/hakkimda">Hakkımda</a>
+    </nav>
+    <a class="btn btn-primary" href="/#iletisim">Dürüst fikir alın</a>
+  </div>
+</header>
+<main id="article" style="display:block">
+  <div class="wrap">
+    <nav class="breadcrumb"><a href="/">Anasayfa</a> / <a href="/rehberler">Rehberler</a> / <span>Değer Artışı Kazancı Vergisi Hesaplama</span></nav>
+    <header class="article-head">
+      <div class="eyebrow">Hesaplama Aracı</div>
+      <h1 class="display" style="margin-top:12px">Değer Artışı Kazancı Vergisi Hesaplama</h1>
+      <p class="lead" style="margin-top:10px">Evinizi, arsanızı veya iş yerinizi aldığınız tarihten itibaren 5 yıl içinde sattıysanız gelir vergisi çıkabilir. Alış-satış tarihlerini ve bedellerini girin; GİB'in resmî yöntemiyle (Yİ-ÜFE endeksleme + istisna + vergi tarifesi) vergi çıkıp çıkmadığını ve tahmini tutarı anında görün.</p>
+      <div class="author-strip">
+        <img src="/assets/adem-aslan-portre.png" alt="Adem Aslan">
+        <div><div class="name">Adem Aslan</div><div class="role">Gayrimenkul Danışmanı · Nest Life Gayrimenkul</div></div>
+        <span class="sep">|</span>
+        <span class="mono">GİB 2025 rehberine göre</span>
+      </div>
+    </header>
+    <div class="layout">
+      <article>
+        <div class="calc-card" id="calc">
+          <div class="calc-grid">
+            <div class="field full">
+              <label for="f-edinim">Gayrimenkulü nasıl edindiniz?</label>
+              <select id="f-edinim">
+                <option value="satin">Satın aldım (bedel karşılığı)</option>
+                <option value="ivazsiz">Miras veya bağış yoluyla (ivazsız)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-alis-tarih">Alış (tapu tescil) tarihi</label>
+              <input type="date" id="f-alis-tarih">
+            </div>
+            <div class="field">
+              <label for="f-alis-bedel">Alış bedeli <span class="hint">(tapudaki değer, TL)</span></label>
+              <input type="text" id="f-alis-bedel" inputmode="numeric" placeholder="örn. 3.000.000">
+            </div>
+            <div class="field">
+              <label for="f-satis-tarih">Satış tarihi</label>
+              <input type="date" id="f-satis-tarih">
+            </div>
+            <div class="field">
+              <label for="f-satis-bedel">Satış bedeli <span class="hint">(TL)</span></label>
+              <input type="text" id="f-satis-bedel" inputmode="numeric" placeholder="örn. 15.000.000">
+            </div>
+            <div class="field full">
+              <label for="f-gider">Giderler: tapu harcı, komisyon ve kredi faiz ödemeleri <span class="hint">(isteğe bağlı — satışta üzerinizde kalan vergi/harçlar + evin alımında kullanılan kredinin belgeli faiz ödemeleri)</span></label>
+              <input type="text" id="f-gider" inputmode="numeric" placeholder="örn. 300.000 (boş bırakılabilir)">
+            </div>
+          </div>
+          <div class="calc-actions">
+            <button class="btn btn-primary" id="btn-hesapla" type="button">Vergiyi hesapla</button>
+            <button class="btn btn-secondary" id="btn-temizle" type="button">Temizle</button>
+          </div>
+          <div class="err" id="calc-err"></div>
+          <div class="result" id="calc-result">
+            <div class="verdict" id="verdict">
+              <div class="v-label" id="v-label"></div>
+              <div class="v-main" id="v-main"></div>
+              <div class="v-sub" id="v-sub"></div>
+            </div>
+            <div class="breakdown" id="breakdown" style="display:none">
+              <h4>Hesap adımları</h4>
+              <ul id="bd-list"></ul>
+            </div>
+            <p class="smallnote" id="beyan-note" style="display:none"></p>
+          </div>
+          <p class="smallnote">Bu araç bilgilendirme amaçlıdır ve GİB "Diğer Kazanç ve İratların Vergilendirilmesi Rehberi (2025)" ile güncel tebliğlerdeki yöntem ve tutarları esas alır. Kat karşılığı edinim, cins tashihi, birden fazla satış (ticari kazanç riski) gibi özel durumlarda sonuç değişebilir; kesin hesap için mali müşavirinize danışın.</p>
+        </div>
+
+        <div class="guide-body" style="margin-top:40px">
+          <h2>Bu vergi kimden, ne zaman istenir?</h2>
+          <p>Gelir Vergisi Kanunu'na göre, <strong>bedel ödeyerek</strong> edindiğiniz bir gayrimenkulü (konut, arsa, iş yeri) tapuya tescil tarihinden itibaren <strong>5 yıl içinde</strong> satarsanız, elde ettiğiniz kazanç "değer artışı kazancı" olarak gelir vergisine tabidir. Beş yıllık süre takvim günü esasıyla hesaplanır. 5 yıl dolduktan sonra yapılan satışlarda ise kazanç ne kadar olursa olsun <strong>vergi ödenmez</strong>, beyanname de verilmez.</p>
+          <p><strong>Miras veya bağış (ivazsız)</strong> yoluyla edinilen gayrimenkullerin satışı, süre ne olursa olsun değer artışı kazancı kapsamında vergilendirilmez.</p>
+          <h2>Vergi nasıl hesaplanır?</h2>
+          <p>Hesap dört adımda yapılır. Önce alış bedeli, satın aldığınız aydan önceki ay ile sattığınız aydan önceki ay arasındaki <strong>Yİ-ÜFE artışı</strong> oranında güncellenir (endeksleme, artış %10 ve üzerindeyse uygulanır). Satış bedelinden bu endekslenmiş maliyet ve satış giderleri düşülerek <strong>safi kazanç</strong> bulunur. Safi kazançtan satış yılına ait <strong>istisna tutarı</strong> (2024: 87.000 TL, 2025: 120.000 TL, 2026: 150.000 TL) düşülür. Kalan tutara o yılın <strong>gelir vergisi tarifesi</strong> (%15-%40) uygulanır.</p>
+          <p>Vergi, satışı izleyen yılın Mart ayında yıllık gelir vergisi beyannamesi ile beyan edilir ve Mart ile Temmuz aylarında iki eşit taksitte ödenir. İstisna altında kalan kazançlar için beyanname verilmez.</p>
+          <h2>Sık karışan noktalar</h2>
+          <ul>
+            <li><strong>Süre tapudan başlar:</strong> 5 yıl kural olarak tapu tescil tarihinden işler; ancak konut fiilen daha önce teslim alındıysa (fatura, teslim tutanağı ile belgelenmek şartıyla) fiilî kullanım tarihi esas alınabilir.</li>
+            <li><strong>Kat karşılığı alınan daire yeni iktisap sayılır:</strong> Arsanızı müteahhide verip aldığınız dairede 5 yıl, dairenin tapuya tescilinden itibaren yeniden başlar.</li>
+            <li><strong>Sık alım-satım ticari kazanç sayılabilir:</strong> Aynı yıl veya art arda yıllarda birden fazla alım-satım, "ticari kazanç" olarak çok farklı şekilde vergilendirilebilir.</li>
+            <li><strong>Kredi faizi maliyete eklenebilir:</strong> GİB özelgelerine göre, evin alımında kullanılan konut kredisinin faiz ödemeleri (ve erken kapama bedeli), belgelenmesi ve başka bir gelirden indirilmemiş olması şartıyla, <em>endekslenmeksizin</em> maliyete eklenir. Bu araçta faiz toplamını "Giderler" alanına yazmanız yeterlidir — aynı sonucu verir.</li>
+            <li><strong>Tapudaki değerler esastır:</strong> Hesapta alış ve satış bedeli olarak tapuya beyan edilen değerler kullanılır. Düşük beyan hem cezalı tapu harcı hem de ileride yüksek değer artışı vergisi riski doğurur.</li>
+          </ul>
+        </div>
+      </article>
+      <aside class="sidebar">
+        <div class="sticky">
+          <div class="card">
+            <h3>Güncel tutarlar</h3>
+            <ul class="facts">
+              <li><span class="k">İstisna (2025 satışı)</span><span class="v">120.000 TL</span></li>
+              <li><span class="k">İstisna (2026 satışı)</span><span class="v">150.000 TL</span></li>
+              <li><span class="k">Endeksleme şartı</span><span class="v">Yİ-ÜFE artışı ≥ %10</span></li>
+              <li><span class="k">Vergisiz satış</span><span class="v">5 yıl sonrası</span></li>
+              <li><span class="k">Beyan dönemi</span><span class="v">İzleyen yıl Mart</span></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Satış öncesi danışın</h3>
+            <p style="font-size:14px;color:var(--muted);margin-bottom:14px">Satış zamanlamasını birkaç ay değiştirmek bazen yüz binlerce lira vergi farkı yaratır. Çekmeköy / Alemdağ bölgesinde satış planlıyorsanız birlikte bakalım.</p>
+            <a class="btn btn-wa btn-block" href="https://wa.me/905322074087?text=Merhaba%2C%20de%C4%9Fer%20art%C4%B1%C5%9F%C4%B1%20kazanc%C4%B1%20vergisi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan yazın</a>
+            <a class="btn btn-secondary btn-block" style="margin-top:10px" href="/#iletisim">İletişim formu</a>
+          </div>
+          <div class="card">
+            <h3>Diğer rehberler</h3>
+            <a class="btn btn-secondary btn-block" href="/rehberler">Tüm rehberlere göz at</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img class="flogo" src="/assets/logo-adem-aslan.png" alt="Adem Aslan">
+        <p>Çekmeköy ve Alemdağ gayrimenkulünde bağımsız, güncel ve dürüst kaynak.</p>
+      </div>
+      <div>
+        <h5>İçerik tipleri</h5>
+        <ul>
+          <li><a href="/rehberler?kategori=bolge">Bölge Rehberleri</a></li>
+          <li><a href="/projeler">Proje İncelemeleri</a></li>
+          <li><a href="/rehberler?kategori=alici">Alıcı Rehberleri</a></li>
+          <li><a href="/rehberler">Rehberler / Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>İletişim</h5>
+        <ul>
+          <li><a href="tel:+905322074087">+90 532 207 40 87</a></li>
+          <li><a href="https://wa.me/905322074087" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://instagram.com/ademaslan.official" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.threads.com/@ademaslan.official" target="_blank" rel="noopener">Threads</a></li>
+          <li><a href="https://www.youtube.com/@ademaslan.official" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://www.tiktok.com/@ademaslan.official" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="mailto:teorey@gmail.com">teorey@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Adem Aslan Gayrimenkul Danışmanlığı</span>
+      <a href="/tasarim-sistemi">Tasarım Sistemi →</a>
+    </div>
+  </div>
+</footer>
+<script id="ldjson" type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Değer Artışı Kazancı Vergisi Hesaplama","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"description":"Gayrimenkul satışında değer artışı kazancı vergisini GİB yöntemine göre (5 yıl kuralı, Yİ-ÜFE endeksleme, istisna, gelir vergisi tarifesi) hesaplayan ücretsiz araç.","url":"https://ademaslan.com/rehberler/deger-artisi-vergisi-hesaplama","author":{"@type":"Person","name":"Adem Aslan","url":"https://ademaslan.com/hakkimda"},"publisher":{"@type":"Organization","name":"Nest Life Gayrimenkul","url":"https://ademaslan.com"}}</script>
+<script>
+(function(){
+"use strict";
+/* ---- Veri: TÜİK Yİ-ÜFE (2003=100) genel endeksi. Anahtar: "yıl-ay" ---- */
+var UFE = {
+ 2017:[284.99,288.59,291.58,293.79,295.31,295.52,297.65,300.18,300.90,306.04,312.21,316.48],
+ 2018:[319.60,328.17,333.21,341.88,354.85,365.60,372.06,396.62,439.78,443.78,432.55,422.94],
+ 2019:[424.86,425.26,431.98,444.85,456.74,457.16,452.63,449.96,450.55,451.31,450.97,454.08],
+ 2020:[462.42,464.64,468.69,474.69,482.02,485.37,490.33,501.85,515.13,533.44,555.18,568.27],
+ 2021:[583.38,590.52,614.93,641.63,666.79,693.54,710.61,730.28,741.58,780.45,858.43,1022.25],
+ 2022:[1129.03,1210.60,1321.90,1423.27,1548.01,1652.75,1738.21,1780.05,1865.09,2011.13,2026.08,2021.19],
+ 2023:[2105.17,2138.04,2147.44,2164.94,2179.02,2320.72,2511.75,2659.60,2749.98,2803.29,2882.04,2915.02],
+ 2024:[3035.59,3149.03,3252.79,3369.98,3435.96,3483.25,3550.88,3610.51,3659.84,3707.10,3731.43,3746.52],
+ 2025:[3861.33,3943.01,4017.30,4128.19,4230.69,4334.94,4409.73,4518.89,4632.89,4708.20,4747.63,4783.04],
+ 2026:[4910.53,5029.76,5145.36,5308.46,5454.58,5552.52]
+};
+/* ---- Satış yılına göre istisna (GVK mük. 80) ---- */
+var ISTISNA = {2024:87000, 2025:120000, 2026:150000};
+/* ---- Ücret dışı gelirler için vergi tarifesi ---- */
+var TARIFE = {
+ 2024:[{u:110000,b:0,r:.15},{u:230000,b:16500,r:.20},{u:580000,b:40500,r:.27},{u:3000000,b:135000,r:.35},{u:Infinity,b:982000,r:.40}],
+ 2025:[{u:158000,b:0,r:.15},{u:330000,b:23700,r:.20},{u:800000,b:58100,r:.27},{u:4300000,b:185000,r:.35},{u:Infinity,b:1410000,r:.40}],
+ 2026:[{u:190000,b:0,r:.15},{u:400000,b:28500,r:.20},{u:1000000,b:70500,r:.27},{u:5300000,b:232500,r:.35},{u:Infinity,b:1737500,r:.40}]
+};
+/* ---- Beyan yılına göre yıllık GV beyannamesi damga vergisi ---- */
+var DAMGA = {2025:672.40, 2026:1189.50};
+var AYLAR = ["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
+
+function tl(n){return n.toLocaleString("tr-TR",{minimumFractionDigits:2,maximumFractionDigits:2})+" TL";}
+function tl0(n){return n.toLocaleString("tr-TR",{maximumFractionDigits:0})+" TL";}
+function ufeAt(y,m){ /* m: 0-11 */ return (UFE[y]&&UFE[y][m]!==undefined)?UFE[y][m]:null; }
+function prevMonth(d){ var y=d.getFullYear(), m=d.getMonth()-1; if(m<0){m=11;y--;} return {y:y,m:m}; }
+function parseMoney(s){ /* TR (3.000.000,50) ve EN (3,000,000.50) formatlarini guvenle cozer */
+  if(!s) return null; s=String(s).replace(/[^\d,\.]/g,""); if(s==="") return null;
+  var lastDot=s.lastIndexOf("."), lastCom=s.lastIndexOf(","), dec="";
+  if(lastDot>-1&&lastCom>-1){ dec=lastDot>lastCom?".":","; }
+  else if(lastCom>-1){ var pc=s.split(","); if(pc.length===2&&pc[1].length>0&&pc[1].length<3) dec=","; }
+  else if(lastDot>-1){ var pd=s.split("."); if(pd.length===2&&pd[1].length>0&&pd[1].length<3) dec="."; }
+  if(dec){ var i=s.lastIndexOf(dec); s=s.slice(0,i).replace(/[.,]/g,"")+"."+s.slice(i+1).replace(/[.,]/g,""); }
+  else{ s=s.replace(/[.,]/g,""); }
+  var v=parseFloat(s); return isNaN(v)?null:v; }
+function vergiHesapla(matrah,tarife){
+  for(var i=0;i<tarife.length;i++){
+    var alt=(i===0)?0:tarife[i-1].u;
+    if(matrah<=tarife[i].u) return tarife[i].b+(matrah-alt)*tarife[i].r;
+  }
+}
+function fmtDate(d){return d.getDate()+" "+AYLAR[d.getMonth()]+" "+d.getFullYear();}
+
+var $=function(id){return document.getElementById(id);};
+function showErr(msg){ $("calc-err").innerHTML=msg; $("calc-err").style.display="block"; $("calc-result").style.display="none"; }
+function showVerdict(cls,label,main,sub){
+  var v=$("verdict"); v.className="verdict "+cls;
+  $("v-label").textContent=label; $("v-main").textContent=main; $("v-sub").innerHTML=sub||"";
+  $("calc-err").style.display="none"; $("calc-result").style.display="block";
+}
+function rows(list){
+  var html=""; list.forEach(function(r){ html+='<li'+(r.total?' class="total"':'')+'><span class="k">'+r.k+'</span><span class="v">'+r.v+"</span></li>"; });
+  $("bd-list").innerHTML=html; $("breakdown").style.display="block";
+}
+
+/* Tutar alanlarinda canli binlik bicimlendirme (yazarken 3.000.000 gorunur) */
+["f-alis-bedel","f-satis-bedel","f-gider"].forEach(function(id){
+  $(id).addEventListener("input",function(){
+    if(this.value.indexOf(",")>-1) return; /* virgullu (ondalikli/EN) girise dokunma; hesapta parseMoney cozer */
+    var d=this.value.replace(/\D/g,"");
+    if(!d){ this.value=""; return; }
+    this.value=parseInt(d,10).toLocaleString("tr-TR");
+  });
+});
+
+$("btn-temizle").addEventListener("click",function(){
+  ["f-alis-tarih","f-alis-bedel","f-satis-tarih","f-satis-bedel","f-gider"].forEach(function(id){$(id).value="";});
+  $("f-edinim").value="satin";
+  $("calc-err").style.display="none"; $("calc-result").style.display="none";
+});
+
+$("btn-hesapla").addEventListener("click",function(){
+  $("breakdown").style.display="none"; $("beyan-note").style.display="none";
+
+  var edinim=$("f-edinim").value;
+  var at=$("f-alis-tarih").value?new Date($("f-alis-tarih").value+"T12:00:00"):null;
+  var st=$("f-satis-tarih").value?new Date($("f-satis-tarih").value+"T12:00:00"):null;
+  var ab=parseMoney($("f-alis-bedel").value);
+  var sb=parseMoney($("f-satis-bedel").value);
+  var gd=parseMoney($("f-gider").value)||0;
+
+  if(edinim==="ivazsiz"){
+    showVerdict("ok","Sonuç","Vergi çıkmıyor ✓","Miras veya bağış yoluyla (ivazsız) edinilen gayrimenkullerin satışından doğan kazanç, değer artışı kazancı olarak <strong>vergilendirilmez</strong> ve süre şartı aranmaz. Beyanname vermenize gerek yoktur.");
+    return;
+  }
+  if(!at||!st){ showErr("Lütfen alış ve satış tarihlerini seçin."); return; }
+  if(ab===null||sb===null){ showErr("Lütfen alış ve satış bedellerini girin."); return; }
+  if(st<=at){ showErr("Satış tarihi, alış tarihinden sonra olmalıdır."); return; }
+
+  /* 5 yıl kuralı (takvim günü esası) */
+  var sinir=new Date(at); sinir.setFullYear(sinir.getFullYear()+5);
+  if(st>sinir){
+    showVerdict("ok","Sonuç","Vergi çıkmıyor ✓","Gayrimenkulü alış tarihinden itibaren <strong>5 yıllık süre dolduktan sonra</strong> ("+fmtDate(sinir)+" sonrasında) sattığınız için kazancınız gelir vergisine tabi değildir. Beyanname vermenize gerek yoktur.");
+    return;
+  }
+
+  var satisYili=st.getFullYear();
+  if(!TARIFE[satisYili]||ISTISNA[satisYili]===undefined){
+    if(satisYili<2024){ showErr("Bu araç 2024 ve sonrası satışlar için hesaplama yapar. "+satisYili+" yılındaki satışların beyan dönemi geçmiştir; durumunuz için mali müşavirinize danışmanızı öneririm."); }
+    else{ showErr(satisYili+" yılına ait istisna tutarı ve vergi tarifesi henüz açıklanmadığı için hesaplama yapılamıyor."); }
+    return;
+  }
+
+  /* Endeksleme: alış ayından önceki ay ile satış ayından önceki ay */
+  var pa=prevMonth(at), ps=prevMonth(st);
+  var ia=ufeAt(pa.y,pa.m), is=ufeAt(ps.y,ps.m);
+  if(ia===null){ showErr("Alış tarihinize ait Yİ-ÜFE endeks verisi bu araçta bulunmuyor ("+AYLAR[pa.m]+" "+pa.y+"). Lütfen mali müşavirinize danışın."); return; }
+  if(is===null){ showErr(AYLAR[ps.m]+" "+ps.y+" dönemi Yİ-ÜFE endeksi henüz TÜİK tarafından açıklanmadı. Endeks açıklandıktan sonra kesin hesap yapılabilir."); return; }
+
+  var artis=(is-ia)/ia*100;
+  var endeksli = artis>=10 ? ab*(is/ia) : ab;
+  var safi = sb - endeksli - gd;
+  var istisna = ISTISNA[satisYili];
+  var beyanYili = satisYili+1;
+
+  var liste=[
+    {k:"Alış bedeli",v:tl0(ab)},
+    {k:"Satış bedeli",v:tl0(sb)}
+  ];
+  if(gd>0) liste.push({k:"Giderler (harç, komisyon, kredi faizi)",v:tl0(gd)});
+  liste.push({k:"Yİ-ÜFE ("+AYLAR[pa.m]+" "+pa.y+" → "+AYLAR[ps.m]+" "+ps.y+")",v:ia.toLocaleString("tr-TR",{minimumFractionDigits:2})+" → "+is.toLocaleString("tr-TR",{minimumFractionDigits:2})});
+  liste.push({k:"Yİ-ÜFE artış oranı",v:"%"+artis.toLocaleString("tr-TR",{maximumFractionDigits:2})+(artis>=10?" (endeksleme uygulandı)":" (%10 altı — endeksleme yok)")});
+  liste.push({k:"Endekslenmiş maliyet bedeli",v:tl(endeksli)+(artis>=10?" (×"+(is/ia).toLocaleString("tr-TR",{maximumFractionDigits:2})+")":"")});
+  liste.push({k:"Safi değer artışı kazancı",v:tl(Math.max(safi,0))});
+
+  if(safi<=0){
+    showVerdict("ok","Sonuç","Vergi çıkmıyor ✓","Alış ile satış arasında Yİ-ÜFE %"+artis.toLocaleString("tr-TR",{maximumFractionDigits:0})+" arttığı için, kanun gereği (GVK mük. md. 81) alış bedeliniz "+(is/ia).toLocaleString("tr-TR",{maximumFractionDigits:2})+" katına güncellendi ve "+tl(endeksli)+" olarak kabul edildi. Satış bedeliniz bu endekslenmiş maliyetin altında kaldığından vergiye tabi bir kazanç <strong>oluşmuyor</strong>; kazancınız enflasyon artışı içinde kaldı. Beyanname vermenize gerek yoktur. <em>Bu, mükellef lehine bir sonuçtur — rakam yüksek görünse de resmî TÜİK endeksiyle yapılan yasal hesaptır.</em>");
+    rows(liste);
+    return;
+  }
+
+  var matrah=safi-istisna;
+  liste.push({k:"İstisna ("+satisYili+")",v:"− "+tl0(istisna)});
+
+  if(matrah<=0){
+    showVerdict("ok","Sonuç","Vergi çıkmıyor ✓","Kazancınız ("+tl(safi)+"), "+satisYili+" yılı istisna tutarı olan "+tl0(istisna)+" tutarının <strong>altında</strong> kaldığı için vergi doğmuyor ve beyanname verilmesine gerek yok.");
+    rows(liste);
+    return;
+  }
+
+  var gv=vergiHesapla(matrah,TARIFE[satisYili]);
+  var damga=DAMGA[beyanYili];
+  liste.push({k:"Vergiye tabi matrah",v:tl(matrah)});
+  liste.push({k:"Hesaplanan gelir vergisi",v:tl(gv)});
+  if(damga!==undefined){
+    liste.push({k:"Beyanname damga vergisi ("+beyanYili+")",v:tl(damga)});
+    liste.push({k:"Toplam ödeme",v:tl(gv+damga),total:true});
+  }else{
+    liste.push({k:"Beyanname damga vergisi",v:beyanYili+" yılında açıklanacak"});
+    liste.push({k:"Toplam (damga hariç)",v:tl(gv),total:true});
+  }
+
+  showVerdict("tax","Sonuç","Tahmini vergi: "+tl(gv),"Satışınız 5 yıllık süre içinde kaldığı için değer artışı kazancınız gelir vergisine tabi. Efektif vergi yükü, satış bedelinin %"+((gv/sb)*100).toLocaleString("tr-TR",{maximumFractionDigits:1})+"'i düzeyinde.");
+  rows(liste);
+  var bn=$("beyan-note");
+  bn.innerHTML="<strong>Beyan ve ödeme:</strong> Bu kazanç, "+beyanYili+" yılının Mart ayında yıllık gelir vergisi beyannamesi ile (Hazır Beyan Sistemi üzerinden) beyan edilir; vergi, "+beyanYili+" Mart ve Temmuz aylarında iki eşit taksitte ödenir.";
+  bn.style.display="block";
+});
+})();
+</script>
+</body>
+</html>
