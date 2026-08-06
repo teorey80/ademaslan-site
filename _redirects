@@ -13,10 +13,10 @@
 /portfoy-detay.html     /portfoy-detay      301!
 
 # Eski (silinmiş) statik proje sayfaları → yeni statik sayfalar
-/birbahce-evleri        /projeler/birbahce-evleri/   301
-/birbahce-evleri.html   /projeler/birbahce-evleri/   301
-/nef-camlitepe          /projeler/nef-camlitepe/     301
-/nef-camlitepe.html     /projeler/nef-camlitepe/     301
+/birbahce-evleri        /projeler/birbahce-evleri/   301!
+/birbahce-evleri.html   /projeler/birbahce-evleri/   301!
+/nef-camlitepe          /projeler/nef-camlitepe/     301!
+/nef-camlitepe.html     /projeler/nef-camlitepe/     301!
 
 # Dinamik yedekler: /projeler/<slug>/index.html ve /rehberler/<slug>/index.html
 # statik dosyaları bu kurallardan ÖNCE sunulur; kurallar yalnızca henüz statik
