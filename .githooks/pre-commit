@@ -1,0 +1,23 @@
+#!/bin/sh
+# SEO koruma: sayfalar site dışında üretilip repoya kopyalandığı için <head>
+# bloğundaki SEO etiketleri siliniyor. Her commit'te değişmezleri yeniden
+# dayat ve onarılan dosyaları commit'e dahil et.
+#
+# Kurulum (bir kez):  git config core.hooksPath .githooks
+# Atlamak için:       git commit --no-verify
+
+python3 tools/seo-guard.py
+status=$?
+
+# Onarılan dosyaları commit'e ekle
+git diff --name-only -- '*.html' sitemap.xml | while read -r f; do
+  [ -n "$f" ] && git add "$f"
+done
+
+if [ $status -ne 0 ]; then
+  echo ""
+  echo "Commit durduruldu: yukarıdaki maddeler elle düzeltilmeli."
+  echo "Yine de commit'lemek için: git commit --no-verify"
+fi
+
+exit $status
