@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="tr" data-theme="light" data-accent="terracotta">
+<html lang="tr" data-theme="light" data-accent="blue">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Adem Aslan — Çekmeköy & Alemdağ Gayrimenkul Rehberi</title>
-<meta name="description" content="Çekmeköy, Alemdağ ve Fikirtepe gayrimenkul piyasası üzerine bağımsız bölge rehberleri, proje incelemeleri ve aktif portföy. Adem Aslan ile doğru kararı verin." />
+<title>Adem Aslan — Gayrimenkulü Anlayın, Bilerek Karar Verin</title>
+<meta name="description" content="Adem Aslan ile gayrimenkulü anlayın: YouTube videoları, tapu ve ev alma rehberleri, hesaplama araçları, bölge incelemeleri ve güncel portföy." />
 <link rel="canonical" href="https://ademaslan.com/" />
-<meta property="og:title" content="Adem Aslan — Çekmeköy & Alemdağ Gayrimenkul Rehberi" />
-<meta property="og:description" content="Bölge rehberleri, proje incelemeleri ve güncel portföy. Çekmeköy ve Alemdağ'da ev ararken güvenilir kaynak." />
+<meta property="og:title" content="Adem Aslan — Gayrimenkulü Anlayın, Bilerek Karar Verin" />
+<meta property="og:description" content="Gayrimenkul danışmanı ve içerik üreticisi Adem Aslan’dan video anlatımlar, rehberler, hesaplama araçları ve sahadan portföyler." />
 <meta property="og:image" content="https://ademaslan.com/assets/logo-adem-aslan.png" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ademaslan.com/" />
@@ -25,7 +25,7 @@
   try {
     var r = document.documentElement;
     r.dataset.theme = localStorage.getItem('aa-theme') || 'light';
-    r.dataset.accent = localStorage.getItem('aa-accent') || 'terracotta';
+    r.dataset.accent = localStorage.getItem('aa-accent') || 'blue';
   } catch (e) {}
 })();
 </script>
@@ -65,50 +65,19 @@
   }
 }</script>
 
-<style>
-/* Hero — split layout (sol metin + sağ portre) */
-.hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:center}
-.hero-left{min-width:0}
-.hero-portrait{margin:0;position:relative}
-.hero-portrait img{width:100%;height:auto;max-width:520px;display:block;margin-left:auto;filter:drop-shadow(0 22px 28px rgba(26,26,26,.14)) drop-shadow(0 6px 10px rgba(26,26,26,.08))}
-.hero-portrait::after{content:"";position:absolute;left:5%;right:0;bottom:-8px;height:60px;background:radial-gradient(ellipse at center,rgba(184,92,63,.10),transparent 70%);z-index:-1;filter:blur(8px)}
-
-/* Sosyal ikon şeridi — portrenin altında */
-.hero-social{display:flex;align-items:center;justify-content:center;gap:12px;max-width:520px;margin:24px 0 0 auto}
-.hero-social a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--accent-tint-2);color:var(--accent);border:1px solid var(--accent-line);transition:background .22s ease,color .22s ease,transform .22s ease,box-shadow .22s ease}
-.hero-social a:hover{background:var(--accent);color:var(--accent-ink);transform:translateY(-3px);box-shadow:var(--shadow-md)}
-.hero-social svg{width:20px;height:20px}
-.hero-social .hs-label{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted);margin-right:6px}
-
-.hero-proof{display:flex;flex-wrap:wrap;gap:32px;margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
-.hero-proof .p{display:flex;flex-direction:column;gap:3px}
-.hero-proof .n{font-family:var(--serif);font-size:1.55rem;font-weight:500;color:var(--ink);line-height:1}
-.hero-proof .l{font-size:12px;color:var(--ink-muted);text-transform:uppercase;letter-spacing:.06em;font-weight:500}
-
-@media(max-width:980px){
-  .hero-grid{grid-template-columns:1fr;gap:36px}
-  .hero-portrait{order:-1}
-  .hero-portrait img{max-width:340px;margin:0 auto}
-  .hero-social{margin:18px auto 0}
-  .hero-proof{gap:20px}
-  .hero-proof .n{font-size:1.3rem}
-}
-</style>
+<link rel="stylesheet" href="/css/home.css" />
 </head>
-<body>
-
-<!-- ======================== NAV ======================== -->
-<header class="nav">
+<body class="editorial-home"><a class="skip-link" href="#icerik">İçeriğe geç</a><header class="nav">
   <div class="nav-inner">
     <a class="nav-logo" href="/" aria-label="Adem Aslan — Anasayfa">
-      <img src="assets/logo-adem-aslan.png" alt="Adem Aslan" />
+      <span class="wordmark">adem aslan<span class="brand-dot">.</span></span><span class="brand-caption">GAYRİMENKUL · BİLGİ · DENEYİM</span>
     </a>
     <nav class="nav-links" aria-label="Ana menü">
       <a href="/rehberler">Rehberler</a>
-      <a href="/rehberler?kategori=bolge">Bölge Rehberleri</a>
+      <a href="#videolar">Videolar</a>
       <a href="/projeler">Proje İncelemeleri</a>
       <a href="/portfoy">Portföy</a>
-      <a href="#sorular">Soru-Cevap</a>
+      <a href="#araclar">Araçlar</a>
       <a href="/hakkimda">Hakkımda</a>
     </nav>
     <div class="nav-right">
@@ -116,7 +85,7 @@
         <svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
         <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
       </button>
-      <a href="#iletisim" class="btn btn-primary btn-sm">Dürüst fikir alın</a>
+      <a href="#iletisim" class="btn btn-primary btn-sm">İletişime geç</a>
       <button class="icon-btn nav-toggle" data-nav-toggle aria-label="Menüyü aç">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
@@ -124,395 +93,26 @@
   </div>
 </header>
 
-<main>
-
-<!-- ======================== HERO ======================== -->
-<section class="section" style="padding-bottom: clamp(32px,4vw,52px); padding-top: clamp(48px,6vw,72px);">
-  <div class="wrap">
-    <div class="hero-grid">
-    <div class="hero-left">
-    <p class="eyebrow reveal" style="margin-bottom:22px;">Çekmeköy · Alemdağ · Fikirtepe gayrimenkul rehberi</p>
-    <h1 class="reveal" style="font-size:clamp(2.5rem,6vw,4.6rem); max-width:16ch; margin-bottom:24px;">Çekmeköy ve Alemdağ'da ev arıyorsanız, doğru yerdesiniz.</h1>
-    <p class="lead reveal" style="max-width:60ch; margin-bottom:40px;">Satış baskısı değil, bilgi. Bölgeyi sokak sokak bilen bir danışmandan bağımsız mahalle rehberleri, dürüst proje incelemeleri ve güncel portföy — kararınızı veriden yola çıkarak verin.</p>
-
-    <form class="search reveal" data-search aria-label="İlan ara">
-      <div>
-        <label for="s-bolge">Bölge</label>
-        <select id="s-bolge">
-          <option>Tüm bölgeler</option>
-          <option>Çekmeköy</option>
-          <option>Alemdağ</option>
-          <option>Fikirtepe</option>
-          <option>Taşdelen</option>
-          <option>Ömerli</option>
-        </select>
-      </div>
-      <div>
-        <label for="s-tip">Tip</label>
-        <select id="s-tip">
-          <option>Konut · İşyeri · Arsa</option>
-          <option>Konut</option>
-          <option>İşyeri</option>
-          <option>Arsa</option>
-        </select>
-      </div>
-      <div>
-        <label for="s-durum">Durum</label>
-        <select id="s-durum">
-          <option>Satılık & Kiralık</option>
-          <option>Satılık</option>
-          <option>Kiralık</option>
-        </select>
-      </div>
-      <button class="search-btn" type="submit">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-        Ara
-      </button>
-    </form>
-
-    <!-- Sosyal kanıt — hızlı güven verici -->
-    <div class="hero-proof reveal">
-      <div class="p"><span class="n">19 yıl</span><span class="l">Çekmeköy / Alemdağ saha</span></div>
-      <div class="p"><span class="n">180+</span><span class="l">Mutlu alıcı ve satıcı</span></div>
-      <div class="p"><span class="n">40+</span><span class="l">Son 12 ay tamamlanan satış</span></div>
-      <div class="p"><span class="n">25+</span><span class="l">Yayınlanan rehber & inceleme</span></div>
-    </div>
-    </div><!-- /.hero-left -->
-
-    <aside class="hero-portrait reveal">
-      <img src="assets/adem-aslan-portre-seffaf.png" alt="Adem Aslan — Çekmeköy ve Alemdağ Gayrimenkul Danışmanı" loading="eager" fetchpriority="high" />
-      <div class="hero-social" aria-label="Sosyal medya hesapları">
-        <span class="hs-label">Takipte kalın</span>
-        <a href="https://instagram.com/ademaslan.official" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram — @ademaslan.official">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="0.7" fill="currentColor" stroke="none"></circle></svg>
-        </a>
-        <a href="https://www.youtube.com/@ademaslan.official" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube — @ademaslan.official">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"></rect><path d="m10.3 9.2 4.9 2.8-4.9 2.8z" fill="currentColor"></path></svg>
-        </a>
-        <a href="https://www.tiktok.com/@ademaslan.official" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok — @ademaslan.official">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 11.6a4.3 4.3 0 1 0 4.3 4.3V3.5c.5 2.7 2.3 4.6 5.2 5"></path></svg>
-        </a>
-        <a href="https://www.threads.com/@ademaslan.official" target="_blank" rel="noopener" aria-label="Threads" title="Threads — @ademaslan.official">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"></path></svg>
-        </a>
-      </div>
-    </aside>
-    </div><!-- /.hero-grid -->
-  </div>
+<main id="icerik">
+<section class="opening wrap" aria-labelledby="page-title">
+ <div class="opening-heading"><div><p class="kicker">ADEM ASLAN İLE GAYRİMENKULÜ ANLAMAK</p><h1 id="page-title">Önce bilgi.<br>Sonra doğru karar<span class="brand-dot">.</span></h1></div><p>Tapunun detayından mahallenin hayatına.<br>Video anlatımlar, işe yarayan rehberler ve<br class="desktop-break"> sahadan gayrimenkul deneyimi.</p></div>
+ <div class="front-grid">
+  <article class="lead-story"><a href="/rehberler/ev-almadan-once-7-kontrol/" class="lead-visual"><img src="https://i.ytimg.com/vi/_2TzEQt8cro/maxresdefault.jpg" alt="Adem Aslan: Ev almadan önce bu 7 kontrolü yapın" width="1280" height="720" fetchpriority="high"><span class="image-label">ÖNE ÇIKAN VİDEO REHBER</span><span class="round-play" aria-hidden="true">▶</span></a><div class="lead-caption"><div><span class="kicker">EV ALMADAN ÖNCE</span><h2><a href="/rehberler/ev-almadan-once-7-kontrol/">Evi beğendiniz.<br>Peki, tapusunu kontrol ettiniz mi?</a></h2></div><a class="text-link" href="/rehberler/ev-almadan-once-7-kontrol/">İzle ve rehberi oku <span aria-hidden="true">↗</span></a></div></article>
+  <aside class="reading-desk" aria-label="Başlangıç rehberleri"><p class="desk-heading">BİR KARAR VERMEDEN ÖNCE</p><a class="desk-story" href="/rehberler/tapu-harci-matrah-duzeltme/"><span class="story-number">01</span><div><span class="kicker">TAPU & İŞLEMLER</span><h3>Tapuda düşük bedel beyanı: düzeltme yolu</h3><span class="small-meta">Videolu rehber · Dilekçe örneği ↗</span></div></a><a class="desk-story" href="/rehberler/deger-artisi-vergisi-hesaplama/"><span class="story-number">02</span><div><span class="kicker">VERGİ & HESAPLAMA</span><h3>Evimi satarsam ne kadar vergi öderim?</h3><span class="small-meta">Rehber ve hesaplama aracı ↗</span></div></a><a class="desk-story" href="/cekmekoy-rehberi"><span class="story-number">03</span><div><span class="kicker">BÖLGE & YAŞAM</span><h3>Çekmeköy’de yaşamı yakından tanıyın</h3><span class="small-meta">Mahalleler, ulaşım ve yaşam ↗</span></div></a><a class="desk-footer" href="#kesfet">Tüm konuları keşfedin <span aria-hidden="true">↓</span></a></aside>
+ </div>
+ <div class="author-line"><img src="/assets/adem-aslan-portre-seffaf.png" alt="" width="44" height="44"><p><strong>Adem Aslan</strong><span>Gayrimenkul danışmanı & içerik üreticisi</span></p><span class="author-note">Sahada görüyorum. Araştırıyorum. Anlatıyorum.</span><a href="/hakkimda" class="text-link">Beni tanıyın ↗</a></div>
 </section>
-
-<!-- full-bleed panorama + bilgi katmanı -->
-<div class="wrap reveal">
-  <figure class="hero-media" style="margin:0;">
-    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=2000&q=80&auto=format&fit=crop" alt="Çekmeköy çevresindeki ormanın içinden süzülen sabah ışığı, yemyeşil ağaçlar" fetchpriority="high" />
-    <div class="scrim"></div>
-    <div class="hm-inner">
-      <div class="hm-cap">
-        <div class="k">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          Çekmeköy · İstanbul Anadolu Yakası
-        </div>
-        <div class="t">Şehrin doğusunda, ormanla metro arasında büyüyen bir bölge.</div>
-      </div>
-      <div class="hm-stats">
-        <div class="hm-chip"><b>~58.000 ₺</b><span>konut · ort. m²</span></div>
-        <div class="hm-chip"><b>14 dk</b><span>metroya mesafe</span></div>
-        <div class="hm-chip"><b>%19</b><span>yıllık değerlenme</span></div>
-      </div>
-    </div>
-  </figure>
-</div>
-
-<!-- ======================== TL;DR ======================== -->
-<section class="section">
-  <div class="wrap" style="display:grid; grid-template-columns: 0.9fr 1.1fr; gap:56px; align-items:start;">
-    <div class="reveal">
-      <p class="eyebrow muted">Kısaca</p>
-      <h2 style="font-size:clamp(1.7rem,3vw,2.4rem); margin-top:14px;">Ben buraya satış yapmaya değil, doğru karar verdirmeye geldim.</h2>
-    </div>
-    <div class="tldr reveal">
-      <h4>Üç cümlede</h4>
-      <ul>
-        <li><span class="n">1</span><span><strong>Ben kimim:</strong> Çekmeköy–Alemdağ bölgesinde çalışan, Nef Çamlıtepe yetkili ofisi ve Emlak Konut projelerinde deneyimli bir gayrimenkul danışmanıyım.</span></li>
-        <li><span class="n">2</span><span><strong>Neden buradayım:</strong> Bölge hakkında internette dolaşan bilgi ya eski ya da reklam. Ben güncel, bağımsız ve sokak düzeyinde doğru bir kaynak bırakmak istiyorum.</span></li>
-        <li><span class="n">3</span><span><strong>Nasıl yardımcı olurum:</strong> Mahalleyi, m² fiyatlarını ve projelerin gerçek artı-eksilerini anlatır; bütçenize ve hedefinize uygun olanı birlikte buluruz.</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<hr class="divider" />
-
-<!-- ======================== 3 ANA YOL ======================== -->
-<section class="section" id="rehberler">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <p class="eyebrow">Nereden başlamalı?</p>
-        <h2 style="margin-top:12px;">Üç yoldan birini seçin</h2>
-      </div>
-      <p>İster bölgeyi tanıyın, ister bir projeyi mercek altına alın, ister hemen ilanlara bakın.</p>
-    </div>
-
-    <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:24px;">
-      <!-- Bölge rehberleri -->
-      <a class="card clickable reveal" href="#rehberler" style="padding:30px;">
-        <div style="width:48px;height:48px;border-radius:12px;background:var(--accent-tint-2);color:var(--accent);display:grid;place-items:center;margin-bottom:20px;">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6.5v13L9 17l6 2.5 6-2.5v-13L15 6.5 9 4Z"/><path d="M9 4v13M15 6.5v13"/></svg>
-        </div>
-        <h3 class="card-title" style="font-size:1.5rem;">Bölge Rehberleri</h3>
-        <p class="card-excerpt" style="margin:10px 0 18px;">Çekmeköy, Alemdağ, Taşdelen… Her mahalle için yaşam, fiyat, ulaşım, okul ve yatırım analizi.</p>
-        <span class="btn btn-ghost" style="padding:0;">Rehberleri keşfet <span class="arrow">→</span></span>
-      </a>
-      <!-- Proje incelemeleri -->
-      <a class="card clickable reveal" href="/projeler" style="padding:30px;">
-        <div style="width:48px;height:48px;border-radius:12px;background:var(--accent-tint-2);color:var(--accent);display:grid;place-items:center;margin-bottom:20px;">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg>
-        </div>
-        <h3 class="card-title" style="font-size:1.5rem;">Proje İncelemeleri</h3>
-        <p class="card-excerpt" style="margin:10px 0 18px;">Nef Çamlıtepe ve Emlak Konut projeleri — daire tipleri, fiyatlar, artılar, eksiler ve dürüst yorum.</p>
-        <span class="btn btn-ghost" style="padding:0;">İncelemeleri oku <span class="arrow">→</span></span>
-      </a>
-      <!-- Aktif portföy -->
-      <a class="card clickable reveal" href="/portfoy" style="padding:30px;">
-        <div style="width:48px;height:48px;border-radius:12px;background:var(--accent-tint-2);color:var(--accent);display:grid;place-items:center;margin-bottom:20px;">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5V21H3V9.5Z"/><path d="M9 21v-7h6v7"/></svg>
-        </div>
-        <h3 class="card-title" style="font-size:1.5rem;">Aktif Portföy</h3>
-        <p class="card-excerpt" style="margin:10px 0 18px;">Satılık ve kiralık konut, işyeri ve arsa ilanları — filtreleyin, karşılaştırın, detayına bakın.</p>
-        <span class="btn btn-ghost" style="padding:0;">İlanlara göz at <span class="arrow">→</span></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ======================== SON REHBERLER ======================== -->
-<section class="section" style="background:var(--bg-sunken);" id="projeler">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <p class="eyebrow">Son yayınlananlar</p>
-        <h2 style="margin-top:12px;">Son rehberler</h2>
-      </div>
-      <a href="#rehberler" class="btn btn-ghost">Tüm rehberler <span class="arrow">→</span></a>
-    </div>
-
-    <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:26px;">
-      <a class="card reveal" href="/rehberler/guvenli-odeme-sistemi-ertelendi/">
-      <div class="ph has-img"><img src="assets/rehber-guvenli-odeme.jpg" alt="Tapuda Güvenli Ödeme Sistemi Ertelendi: 1 Ekim 2026'da Ne Değişecek?" /></div>
-        <div class="card-body">
-          <span class="card-cat">Bilgi Rehberi</span>
-          <h3 class="card-title">Tapuda Güvenli Ödeme Sistemi Ertelendi: 1 Ekim 2026'da Ne Değişecek?</h3>
-          <p class="card-excerpt">Zorunlu uygulama 1 Ekim 2026'ya ertelendi — sistem nasıl işleyecek, kimleri kapsıyor ve o güne kadar ödeme nasıl güvence altına alınır?</p>
-          <div class="card-meta"><span>5 dk okuma</span><span class="dot"></span><span>13 Temmuz 2026</span></div>
-        </div>
-      </a>
-      <a class="card reveal" href="/rehberler/tapu-devrinde-10-kritik-hata/">
-      <div class="ph has-img"><img src="assets/rehber-tapu-10-hata.jpg" alt="Tapu Devrinde Yapılan 10 Kritik Hata: Geri Dönüşü Zor, Pahalıya Patlar" /></div>
-        <div class="card-body">
-          <span class="card-cat">Bilgi Rehberi</span>
-          <h3 class="card-title">Tapu Devrinde Yapılan 10 Kritik Hata</h3>
-          <p class="card-excerpt">Düşük bedel beyanından sözleşmesiz kaporaya — devir gününden önce kapatmanız gereken 10 risk ve çözümleri.</p>
-          <div class="card-meta"><span>7 dk okuma</span><span class="dot"></span><span>13 Temmuz 2026</span></div>
-        </div>
-      </a>
-      <a class="card reveal" href="/rehberler/tapu-takyidat-sorgulama/">
-      <div class="ph has-img"><img src="https://i.ytimg.com/vi/XJ3XFcFje1c/hqdefault.jpg" alt="Tapuda Gizli Tehlike: Haciz, İpotek ve Tedbir Nasıl Sorgulanır?" /></div>
-        <div class="card-body">
-          <span class="card-cat">Bilgi Rehberi</span>
-          <h3 class="card-title">Tapuda Gizli Tehlike: Haciz, İpotek ve Tedbir Nasıl Sorgulanır?</h3>
-          <p class="card-excerpt">Ev almadan önce tapudaki haciz, ipotek ve tedbir (takyidat) kayıtlarını e-Devlet&#x27;ten kontrol edin — &quot;borcum yok&quot; beyanı yeterli değil.</p>
-          <div class="card-meta"><span>4 dk okuma</span><span class="dot"></span><span>10 Temmuz 2026</span></div>
-        </div>
-      </a>
-      <a class="card reveal" href="/rehberler/tapu-kilitleme-web-tapu/">
-      <div class="ph has-img"><img src="https://i.ytimg.com/vi/2wML5VN57ao/hqdefault.jpg" alt="e-Devlet Tapu Kilitleme Nasıl Yapılır? Web Tapu ile Sahte Vekalet Dolandırıcılığına Karşı Mülkünüzü Koruyun" /></div>
-        <div class="card-body">
-          <span class="card-cat">Bilgi Rehberi</span>
-          <h3 class="card-title">e-Devlet Tapu Kilitleme Nasıl Yapılır? Sahte Vekalete Karşı Koruma</h3>
-          <p class="card-excerpt">Web Tapu üzerinden &quot;İşlem Yapılamaz Beyan Tesisi&quot; ve &quot;Tapu Telefon Bilgileri Beyanı&quot; ile mülkünüzü izniniz olmadan satış, ipotek ve devir işlemlerine kapatın.</p>
-          <div class="card-meta"><span>5 dk okuma</span><span class="dot"></span><span>28 Haziran 2026</span></div>
-        </div>
-      </a>
-      <a class="card reveal" href="/rehberler/rayic-bedel-sorgulama/">
-      <div class="ph has-img"><img src="https://i.ytimg.com/vi/zGGOZTb2xDI/hqdefault.jpg" alt="Rayiç Bedel Nedir, e-Devlet'ten Nasıl Sorgulanır? Adım Adım Rehber" /></div>
-        <div class="card-body">
-          <span class="card-cat">Bilgi Rehberi</span>
-          <h3 class="card-title">Rayiç Bedel Nedir, e-Devlet'ten Nasıl Sorgulanır? Adım Adım Rehber</h3>
-          <p class="card-excerpt">Emlak vergisine esas rayiç bedel ile arsa metrekare birim değeri arasındaki fark, e-Devlet üzerinden adım adım sorgulama ve alım-satımda neden önemli olduğu.</p>
-          <div class="card-meta"><span>6 dk okuma</span><span class="dot"></span><span>27 Haziran 2026</span></div>
-        </div>
-      </a>
-      <a class="card reveal" href="/cekmekoy-rehberi">
-      <div class="ph has-img"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&amp;h=520&amp;q=80&amp;auto=format&amp;fit=crop" alt="Çekmeköy&#x27;de yaşam: 2026 mahalle ve fiyat rehberi" /></div>
-        <div class="card-body">
-          <span class="card-cat">Bölge Rehberi</span>
-          <h3 class="card-title">Çekmeköy&#x27;de yaşam: 2026 mahalle ve fiyat rehberi</h3>
-          <p class="card-excerpt">m² fiyatları, ulaşım, okullar ve yatırım potansiyeli — tek sayfada güncel bölge fotoğrafı.</p>
-          <div class="card-meta"><span>14 dk okuma</span><span class="dot"></span><span>3 Haziran 2026</span></div>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ======================== BİLGİ KARTLARI (Instagram / Threads) ======================== -->
-<section class="section" style="padding-bottom:0;">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <p class="eyebrow">Instagram · Threads</p>
-        <h2 style="margin-top:12px;">Bilgi kartları</h2>
-      </div>
-      <a href="https://instagram.com/ademaslan.official" target="_blank" rel="noopener" class="btn btn-ghost">@ademaslan.official <span class="arrow">→</span></a>
-    </div>
-
-    <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:26px;">
-      <a class="card reveal" href="https://www.instagram.com/p/DaFHPrugOZi/" target="_blank" rel="noopener">
-        <div class="ph has-img" style="aspect-ratio:4/5;border:0;">
-          <img src="assets/ig-tapuda-guvenli-odeme.jpg" alt="Tapuda Güvenli Ödeme Ertelendi — Instagram bilgi kartı" loading="lazy" />
-          <span class="ig-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 4H6a2 2 0 0 0-2 2v10"></path></svg></span>
-        </div>
-        <div class="card-body">
-          <span class="card-cat">Instagram Carousel</span>
-          <h3 class="card-title" style="font-size:1.2rem;">Tapuda Güvenli Ödeme Ertelendi</h3>
-          <div class="card-meta"><span>Kaydırmalı bilgi kartı</span></div>
-        </div>
-      </a>
-      <a class="card reveal" href="https://www.instagram.com/p/Damyg5FAMWz/" target="_blank" rel="noopener">
-        <div class="ph has-img" style="aspect-ratio:4/5;border:0;">
-          <img src="assets/ig-tapu-satisi-10-hata.jpg" alt="Tapu Satışında Yapılan 10 Büyük Hata — Instagram bilgi kartı" loading="lazy" />
-          <span class="ig-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 4H6a2 2 0 0 0-2 2v10"></path></svg></span>
-        </div>
-        <div class="card-body">
-          <span class="card-cat">Instagram Carousel</span>
-          <h3 class="card-title" style="font-size:1.2rem;">Tapu Satışında Yapılan 10 Büyük Hata</h3>
-          <div class="card-meta"><span>Kaydırmalı bilgi kartı</span></div>
-        </div>
-      </a>
-      <div class="card reveal" style="background:var(--accent-tint);border-color:var(--accent-line);align-items:center;justify-content:center;text-align:center;padding:36px 28px;gap:0;">
-        <div style="width:56px;height:56px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;margin-bottom:18px;">
-          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="0.7" fill="currentColor" stroke="none"></circle></svg>
-        </div>
-        <h3 class="card-title" style="font-size:1.3rem;">Yeni kartları kaçırmayın</h3>
-        <p class="card-excerpt" style="margin:10px 0 22px;max-width:26ch;">Tapu, satış ve bölge üzerine bilgilendirici carousel'ler Instagram ve Threads'te.</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
-          <a href="https://instagram.com/ademaslan.official" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Instagram</a>
-          <a href="https://www.threads.com/@ademaslan.official" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Threads</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ======================== SON VİDEOLAR ======================== -->
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <p class="eyebrow">YouTube</p>
-        <h2 style="margin-top:12px;">Son videolar</h2>
-      </div>
-      <a href="https://www.youtube.com/@ademaslan.official" target="_blank" rel="noopener" class="btn btn-ghost">Kanala git <span class="arrow">→</span></a>
-    </div>
-
-    <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:26px;">
-      <a class="card reveal" href="https://youtube.com/shorts/XJ3XFcFje1c" target="_blank" rel="noopener">
-        <div class="ph has-img" style="aspect-ratio:16/9;border:0;">
-          <img src="https://i.ytimg.com/vi/XJ3XFcFje1c/hqdefault.jpg" alt="Tapuda Büyük Tehlike! Sakın Borcum Yok Demeyin" />
-          <span class="play-badge" aria-hidden="true"></span>
-        </div>
-        <div class="card-body">
-          <span class="card-cat">Bilgi</span>
-          <h3 class="card-title" style="font-size:1.2rem;">Tapuda Büyük Tehlike! Sakın &quot;Borcum Yok&quot; Demeyin</h3>
-          <div class="card-meta"><span>Shorts</span></div>
-        </div>
-      </a>
-      <a class="card reveal" href="https://youtube.com/shorts/zGGOZTb2xDI" target="_blank" rel="noopener">
-        <div class="ph has-img" style="aspect-ratio:16/9;border:0;">
-          <img src="https://i.ytimg.com/vi/zGGOZTb2xDI/hqdefault.jpg" alt="e-Devlet'ten Rayiç Bedel Sorgulama Nasıl Yapılır?" />
-          <span class="play-badge" aria-hidden="true"></span>
-        </div>
-        <div class="card-body">
-          <span class="card-cat">Bilgi</span>
-          <h3 class="card-title" style="font-size:1.2rem;">e-Devlet'ten Rayiç Bedel Sorgulama Nasıl Yapılır?</h3>
-          <div class="card-meta"><span>Shorts</span></div>
-        </div>
-      </a>
-      <a class="card reveal" href="https://youtube.com/shorts/2wML5VN57ao" target="_blank" rel="noopener">
-        <div class="ph has-img" style="aspect-ratio:16/9;border:0;">
-          <img src="https://i.ytimg.com/vi/2wML5VN57ao/hqdefault.jpg" alt="e-Devlet Tapu Kilitleme Nasıl Yapılır? Dolandırıcılardan Korunma Yolu" />
-          <span class="play-badge" aria-hidden="true"></span>
-        </div>
-        <div class="card-body">
-          <span class="card-cat">Pratik Rehber</span>
-          <h3 class="card-title" style="font-size:1.2rem;">e-Devlet Tapu Kilitleme Nasıl Yapılır? Dolandırıcılardan Korunma Yolu</h3>
-          <div class="card-meta"><span>Shorts</span></div>
-        </div>
-      </a>
-      <a class="card reveal" href="https://youtube.com/shorts/x54Eo0btFdw" target="_blank" rel="noopener">
-        <div class="ph has-img" style="aspect-ratio:16/9;border:0;">
-          <img src="https://i.ytimg.com/vi/x54Eo0btFdw/hqdefault.jpg" alt="Enerji Kimlik Belgesi (EKB) nasıl sorgulanır? e-Devlet ile adım adım" />
-          <span class="play-badge" aria-hidden="true"></span>
-        </div>
-        <div class="card-body">
-          <span class="card-cat">Bilgi</span>
-          <h3 class="card-title" style="font-size:1.2rem;">Enerji Kimlik Belgesi (EKB) nasıl sorgulanır? e-Devlet ile adım adım</h3>
-          <div class="card-meta"><span>Shorts</span></div>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ======================== SOSYAL KANIT ======================== -->
-<section class="section-tight" style="background:var(--accent); color:var(--accent-ink);">
-  <div class="wrap" style="display:grid; grid-template-columns: repeat(4,1fr); gap:32px;">
-    <div class="reveal">
-      <div class="stat-num" style="color:var(--accent-ink);">40<span class="u" style="color:var(--accent-ink);opacity:.6;">+</span></div>
-      <div class="stat-label" style="color:var(--accent-ink);opacity:.75;">Son 12 ayda tamamlanan satış</div>
-    </div>
-    <div class="reveal">
-      <div class="stat-num" style="color:var(--accent-ink);">180<span class="u" style="color:var(--accent-ink);opacity:.6;">+</span></div>
-      <div class="stat-label" style="color:var(--accent-ink);opacity:.75;">Mutlu alıcı ve satıcı</div>
-    </div>
-    <div class="reveal">
-      <div class="stat-num" style="color:var(--accent-ink);">25<span class="u" style="color:var(--accent-ink);opacity:.6;">+</span></div>
-      <div class="stat-label" style="color:var(--accent-ink);opacity:.75;">Yayınlanan rehber & inceleme</div>
-    </div>
-    <div class="reveal">
-      <div class="stat-num" style="color:var(--accent-ink);">19 <span class="u" style="color:var(--accent-ink);opacity:.6;">yıl</span></div>
-      <div class="stat-label" style="color:var(--accent-ink);opacity:.75;">Çekmeköy–Alemdağ saha deneyimi</div>
-    </div>
-  </div>
-</section>
-
-<!-- ======================== YAZAR KARTI ======================== -->
-<section class="section" id="hakkimda">
-  <div class="wrap">
-    <div class="author reveal">
-      <div class="ph has-img" style="border-radius:50%;width:120px;height:120px;flex:none;background:var(--bg-sunken);"><img src="assets/adem-aslan-portre-seffaf.png" alt="Adem Aslan portresi" style="object-fit:cover;object-position:50% 15%;" /></div>
-      <div>
-        <div class="a-name">Adem Aslan</div>
-        <div class="a-role">Gayrimenkul Danışmanı · Çekmeköy</div>
-        <p class="a-bio">On dokuz yıldır Çekmeköy ve Alemdağ'da çalışıyorum. İşim ev satmak kadar, bölgeyi dürüstçe anlatmak. Bu sitedeki her rehberi sahada gördüklerimden yazıyorum.</p>
-        <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <a href="#hakkimda" class="btn btn-secondary btn-sm">Hakkımda</a>
-          <a href="#iletisim" class="btn btn-ghost btn-sm">Benimle konuş <span class="arrow">→</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ======================== FOOTER ======================== -->
-<footer class="footer" id="iletisim">
+<section id="kesfet" class="content-section wrap"><div class="section-title-row"><div><p class="kicker">BİLGİYLE BİR ADIM ÖNDE</p><h2>Bugün neyi merak ediyorsunuz?</h2></div><a class="text-link" href="/rehberler">Tüm rehberler ↗</a></div><div class="discovery-bar"><div class="topic-filters" role="group" aria-label="İçerik konusu"><button class="selected" data-topic="all" aria-pressed="true">Tümü</button><button data-topic="alici" aria-pressed="false">Ev almadan önce</button><button data-topic="tapu" aria-pressed="false">Tapu & işlemler</button><button data-topic="vergi" aria-pressed="false">Vergi</button><button data-topic="bolge" aria-pressed="false">Bölge & yaşam</button></div><label class="content-search"><span aria-hidden="true">⌕</span><input type="search" id="content-query" placeholder="Rehberlerde ara…" aria-label="Rehberlerde ara"></label></div><p class="sr-only" id="result-count" aria-live="polite"></p><div class="editorial-grid"><a class="editorial-card" data-category="alici" href="/rehberler/ev-almadan-once-7-kontrol/"><div class="card-image"><img src="/assets/editorial/ev-alma-rehberi.jpg" alt="Kapora vermeden önce yapmanız gereken 7 kontrol" width="640" height="400" loading="lazy" /></div><div class="ec-body"><span class="kicker">Ev almadan önce</span><h3>Kapora vermeden önce yapmanız gereken 7 kontrol</h3><p>Tapu kaydından iskana, ev alırken atlamamanız gereken adımlar.</p><span class="card-bottom">Kontrol listesi<span aria-hidden="true">↗</span></span></div></a><a class="editorial-card" data-category="tapu" href="/rehberler/tapu-harci-matrah-duzeltme/"><div class="card-image"><img src="https://i.ytimg.com/vi/j8GmcOHQOx4/hqdefault.jpg" alt="Tapu harcında eksik beyan nasıl düzeltilir?" width="640" height="400" loading="lazy" /></div><div class="ec-body"><span class="kicker">Tapu & işlemler</span><h3>Tapu harcında eksik beyan nasıl düzeltilir?</h3><p>Başvuru adımları, video anlatımı ve indirilebilir dilekçe.</p><span class="card-bottom">Video + dilekçe<span aria-hidden="true">↗</span></span></div></a><a class="editorial-card" data-category="vergi" href="/rehberler/deger-artisi-vergisi-hesaplama/"><div class="card-image"><img src="https://i.ytimg.com/vi/WchMqOxeFg8/hqdefault.jpg" alt="Evinizi satarken vergi çıkar mı?" width="640" height="400" loading="lazy" /></div><div class="ec-body"><span class="kicker">Vergi & hesaplama</span><h3>Evinizi satarken vergi çıkar mı?</h3><p>Alış ve satış bilgilerinizi hesaplama aracında değerlendirin.</p><span class="card-bottom">Hesaplama aracı<span aria-hidden="true">↗</span></span></div></a><a class="editorial-card" data-category="tapu" href="/rehberler/tapu-takyidat-sorgulama/"><div class="card-image"><img src="https://i.ytimg.com/vi/XJ3XFcFje1c/hqdefault.jpg" alt="Tapuda ipotek, haciz veya şerh var mı?" width="640" height="400" loading="lazy" /></div><div class="ec-body"><span class="kicker">Tapu & işlemler</span><h3>Tapuda ipotek, haciz veya şerh var mı?</h3><p>Takyidat kaydını sorgulama rehberi.</p><span class="card-bottom">Adım adım rehber<span aria-hidden="true">↗</span></span></div></a><a class="editorial-card" data-category="alici" href="/rehberler/enerji-kimlik-belgesi-sorgulama/"><div class="card-image"><img src="https://i.ytimg.com/vi/PBQfSAoMWQU/hqdefault.jpg" alt="Enerji sınıfı konut kredisini nasıl etkiler?" width="640" height="400" loading="lazy" /></div><div class="ec-body"><span class="kicker">Ev almadan önce</span><h3>Enerji sınıfı konut kredisini nasıl etkiler?</h3><p>Enerji Kimlik Belgesi ve finansman üzerine video anlatımı.</p><span class="card-bottom">Video rehber<span aria-hidden="true">↗</span></span></div></a><a class="editorial-card" data-category="bolge" href="/projeler/birbahce-evleri/"><div class="card-image"><img src="/assets/birbahce/hero.jpg" alt="Birbahçe Evleri: projenin içinde bir tur" width="640" height="400" loading="lazy" /></div><div class="ec-body"><span class="kicker">Bölge & yaşam</span><h3>Birbahçe Evleri: projenin içinde bir tur</h3><p>Çekmeköy Nişantepe’de yaşam alanları ve proje incelemesi.</p><span class="card-bottom">Sahadan inceleme<span aria-hidden="true">↗</span></span></div></a></div><div class="no-results" hidden><h3>Bu konuda bir sonuç bulunamadı.</h3><p>Farklı bir kelime deneyin veya tüm konulara dönün.</p><button class="btn btn-secondary" id="reset-content">Tüm içerikleri göster</button></div></section>
+<section class="video-section" id="videolar"><div class="wrap"><div class="section-title-row"><div><p class="kicker">YOUTUBE’DAN SEÇTİKLERİM</p><h2>Birlikte, daha yakından bakalım.</h2></div><a class="text-link" href="https://www.youtube.com/@ademaslan.official" target="_blank" rel="noopener">YouTube kanalım ↗</a></div><div class="video-grid"><article class="video-card"><a class="video-trigger" href="https://www.youtube.com/watch?v=iPdUmlGrt08" data-video="iPdUmlGrt08" data-video-title="Kiracıyla yaşanan sorunlarda yol haritası"><img src="https://i.ytimg.com/vi/iPdUmlGrt08/hqdefault.jpg" alt="Kiracıyla yaşanan sorunlarda yol haritası" loading="lazy" width="480" height="270"><span class="round-play" aria-hidden="true">▶</span><span class="duration">25:38</span><span class="sr-only">Videoyu sitede izle</span></a><h3>Kiracıyla yaşanan sorunlarda yol haritası</h3><a class="text-link" href="/rehberler">Diğer rehberleri keşfet ↗</a></article><article class="video-card"><a class="video-trigger" href="https://www.youtube.com/watch?v=fER3gm8CJuo" data-video="fER3gm8CJuo" data-video-title="Evini satamayanlar için 5 kontrol listesi"><img src="https://i.ytimg.com/vi/fER3gm8CJuo/hqdefault.jpg" alt="Evini satamayanlar için 5 kontrol listesi" loading="lazy" width="480" height="270"><span class="round-play" aria-hidden="true">▶</span><span class="duration">Video</span><span class="sr-only">Videoyu sitede izle</span></a><h3>Evini satamayanlar için 5 kontrol listesi</h3><a class="text-link" href="/rehberler">Diğer rehberleri keşfet ↗</a></article><article class="video-card"><a class="video-trigger" href="https://www.youtube.com/watch?v=j8GmcOHQOx4" data-video="j8GmcOHQOx4" data-video-title="Tapuda satış bedelini düşük göstermek"><img src="https://i.ytimg.com/vi/j8GmcOHQOx4/hqdefault.jpg" alt="Tapuda satış bedelini düşük göstermek" loading="lazy" width="480" height="270"><span class="round-play" aria-hidden="true">▶</span><span class="duration">6:56</span><span class="sr-only">Videoyu sitede izle</span></a><h3>Tapuda satış bedelini düşük göstermek</h3><a class="text-link" href="/rehberler/tapu-harci-matrah-duzeltme/">İlgili rehberi incele ↗</a></article></div></div></section>
+<section class="content-section wrap" id="araclar"><div class="section-title-row"><div><p class="kicker">OKUYUN, UYGULAYIN</p><h2>Bilgiyi kararınıza taşıyın.</h2></div></div><div class="tool-grid"><a href="/rehberler/deger-artisi-vergisi-hesaplama/" class="tool-card"><span class="tool-icon" aria-hidden="true">₺</span><div><span class="kicker">HESAPLAMA ARACI</span><h3>Değer artışı kazancı vergisi</h3><p>Alış ve satış bilgilerinize göre hesabınızı yapın.</p></div><span aria-hidden="true">↗</span></a><a href="/rehberler/ev-almadan-once-7-kontrol/" class="tool-card"><span class="tool-icon" aria-hidden="true">✓</span><div><span class="kicker">KONTROL LİSTESİ</span><h3>Ev almadan önce 7 kontrol</h3><p>Tapudan iskana, adım adım ilerleyin.</p></div><span aria-hidden="true">↗</span></a></div></section>
+<section class="portfolio-section" id="portfoy"><div class="wrap"><div class="section-title-row"><div><p class="kicker">SAHADAN PORTFÖYÜME</p><h2>Şimdi, evlere bakalım.</h2><p>Yayındaki satılık ve kiralık gayrimenkullerim.</p></div><a href="/portfoy" class="btn btn-primary">Tüm portföyü incele ↗</a></div><div class="home-properties" id="home-properties" aria-live="polite" aria-busy="true"><p class="portfolio-message">Güncel portföy yükleniyor…</p><noscript><p>Güncel ilanlar için JavaScript’i etkinleştirin veya <a href="https://wa.me/905322074087">iletişime geçin</a>.</p></noscript></div></div></section>
+<section class="content-section wrap" id="sorular"><div class="journey"><div><p class="kicker">İLK KEZ Mİ EV ALIYORSUNUZ?</p><h2>Bir rehberden<br>diğerine, adım adım.</h2><p>Önce kontrolleri öğrenin, sonra bölgeyi ve projeleri tanıyın.</p></div><ol><li><a href="/rehberler/ev-almadan-once-7-kontrol/"><span>01</span><div>Almadan önce kontrol edin<small>Tapu, iskan ve kapora</small></div>↗</a></li><li><a href="/cekmekoy-rehberi"><span>02</span><div>Yaşayacağınız bölgeyi tanıyın<small>Çekmeköy bölge rehberi</small></div>↗</a></li><li><a href="/projeler"><span>03</span><div>Projeleri yakından inceleyin<small>Sahadan gözlemler ve video turları</small></div>↗</a></li></ol></div></section>
+<section class="about-strip wrap" id="hakkimda"><img src="/assets/adem-aslan-portre-seffaf.png" alt="Adem Aslan" loading="lazy" width="160" height="180"><div><p class="kicker">BU İÇERİKLERİN ARKASINDA KİM VAR?</p><h2>Merhaba, ben Adem.</h2><p>Gayrimenkul danışmanlığındaki saha deneyimimi videolar ve rehberlerle paylaşıyorum. Amacım, ev alırken ya da satarken doğru soruları sorabilmenize yardımcı olmak.</p><a class="text-link" href="/hakkimda">Hikâyemi okuyun ↗</a></div><a class="btn btn-primary" href="https://wa.me/905322074087" target="_blank" rel="noopener">Birlikte değerlendirelim ↗</a></section>
+</main><footer class="footer" id="iletisim">
   <div class="wrap footer-grid">
     <div>
       <div class="footer-logo"><img src="assets/logo-adem-aslan.png" alt="Adem Aslan" /></div>
-      <p style="color:var(--ink-muted); font-size:14.5px; max-width:34ch; margin:0 0 18px;">Çekmeköy ve Alemdağ gayrimenkulünde bağımsız, güncel ve dürüst kaynak.</p>
+      <p style="color:var(--ink-muted); font-size:14.5px; max-width:34ch; margin:0 0 18px;">Çekmeköy ve Alemdağ gayrimenkulünde video anlatımlar, rehberler ve sahadan deneyim.</p>
       <a href="https://wa.me/905322074087" target="_blank" rel="noopener" class="btn btn-wa btn-sm">
         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-5-4.3-5.1-4.5-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1.1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.3.4c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.8-.1 1.5Z"/></svg>
         WhatsApp
@@ -546,42 +146,14 @@
         <li><a href="https://www.threads.com/@ademaslan.official" target="_blank" rel="noopener">Threads</a></li>
         <li><a href="https://www.youtube.com/@ademaslan.official" target="_blank" rel="noopener">YouTube</a></li>
         <li><a href="https://www.tiktok.com/@ademaslan.official" target="_blank" rel="noopener">TikTok</a></li>
-        <li><a href="mailto:teorey@gmail.com">teorey@gmail.com</a></li>
+        <li><a href="mailto:adem@ademaslan.com">adem@ademaslan.com</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 Adem Aslan Gayrimenkul Danışmanlığı</span>
-    <span><a href="/tasarim-sistemi" class="link-u">Tasarım Sistemi →</a></span>
+    <span><a href="#kesfet" class="link-u">İçerikleri keşfet ↑</a></span>
   </div>
 </footer>
 
-<div id="tweaks-root"></div>
-
-<style>
-  /* sayfa-içi küçük yardımcılar */
-  .play-badge { position:absolute; inset:0; margin:auto; width:60px; height:60px; border-radius:50%;
-    background:color-mix(in srgb, var(--accent) 92%, #000); display:grid; place-items:center; box-shadow:var(--shadow-md); }
-  .play-badge::after { content:""; width:0; height:0; border-style:solid; border-width:11px 0 11px 18px;
-    border-color:transparent transparent transparent var(--accent-ink); margin-left:4px; }
-  .ig-badge { position:absolute; top:12px; right:12px; width:34px; height:34px; border-radius:50%;
-    background:rgba(20,18,12,.5); color:#fff; display:grid; place-items:center;
-    backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px); }
-  .ig-badge svg { width:17px; height:17px; }
-  .nav-links.open { display:flex; position:absolute; top:72px; left:0; right:0; flex-direction:column; gap:0;
-    background:var(--bg); border-bottom:1px solid var(--line); padding:8px 0; }
-  .nav-links.open a { padding:14px 32px; }
-  @media (max-width: 860px) {
-    section .wrap[style*="grid-template-columns: 0.9fr"] { grid-template-columns:1fr !important; gap:28px !important; }
-    section .wrap > div[style*="repeat(3"], main div[style*="repeat(3"] { grid-template-columns:1fr 1fr !important; }
-    section .wrap[style*="repeat(4"] { grid-template-columns:1fr 1fr !important; gap:28px !important; }
-  }
-  @media (max-width: 560px) {
-    main div[style*="repeat(3"], section .wrap[style*="repeat(4"] { grid-template-columns:1fr !important; }
-  }
-</style>
-
-<!-- React (yalnızca Tweaks paneli için) -->
-<script src="js/site.js"></script>
-</body>
-</html>
+<dialog id="video-dialog" aria-labelledby="video-dialog-title"><div class="dialog-head"><h2 id="video-dialog-title">Video anlatımı</h2><button id="close-video" aria-label="Videoyu kapat">✕</button></div><div id="video-player"></div><p>Video açılmıyorsa <a id="youtube-fallback" href="https://www.youtube.com/@ademaslan.official" target="_blank" rel="noopener">YouTube’da izleyin ↗</a></p></dialog><script src="/js/site.js"></script><script src="/js/home.js"></script><script src="/js/data.js"></script></body></html>

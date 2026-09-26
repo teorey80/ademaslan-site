@@ -89,8 +89,8 @@
 function renderDetail() {
   var PROPERTIES = (window.AA_DATA && window.AA_DATA.properties) ? window.AA_DATA.properties : [];
   var params = new URLSearchParams(location.search);
-  var id = parseInt(params.get('id'), 10) || (PROPERTIES[0] && PROPERTIES[0].id);
-  var p = PROPERTIES.filter(function (x) { return x.id === id; })[0] || PROPERTIES[0];
+  var id = params.get('id');
+  var p = id ? PROPERTIES.find(function (x) { return x.uuid === id || String(x.id) === id; }) : PROPERTIES[0];
   var app = document.getElementById('app');
   if (!p) { app.innerHTML = '<section class="section"><div class="wrap"><h1>İlan bulunamadı</h1><p><a class="link-u" href="/portfoy">← Portföye dön</a></p></div></section>'; return; }
 

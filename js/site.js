@@ -28,8 +28,14 @@
     var toggle = document.querySelector('[data-nav-toggle]');
     var links = document.querySelector('.nav-links');
     if (toggle && links) {
+      toggle.setAttribute('aria-expanded', 'false');
+      function closeMenu() { links.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Menüyü aç'); }
+      links.addEventListener('click', function (e) { if (e.target.closest('a')) closeMenu(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && links.classList.contains('open')) { closeMenu(); toggle.focus(); } });
       toggle.addEventListener('click', function () {
-        links.classList.toggle('open');
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
       });
     }
 
