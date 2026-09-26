@@ -16,3 +16,7 @@ YouTube başlıkları kanalın herkese açık `/videos` sayfasından kontrol edi
 Masaüstü, mobil, tablet ve koyu tema; konu/arama filtreleri ve boş sonuç; video penceresi ve Escape ile temizlenmesi; mobil menü; gerçek kaynaktan portföy ve UUID ile ilan detayı; ağ hatası durumunda geri dönüş bağlantısı; yerel bağlantılar ve SEO koruma kontrolü.
 
 Ziyaret süresinde artış ölçülmüş bir sonuç değildir. Düzen, keşif ve içerikler arasında geçişi kolaylaştırmayı amaçlar.
+
+## Tüm sayfalarda ortak tasarım
+
+`css/brand.css` sitenin ortak renklerini, tipografisini, `.aa-header` menüsünü ve `.aa-footer` alanını tanımlar. Her sayfada sayfaya özgü stillerden sonra yüklenir. Eski bağımsız şablonların `--sunken`, `--muted` ve `--soft-ink` değişkenleri de aynı ortak renkleri kullanır. `js/theme-init.js` açık/koyu tema tercihini ilk boyamadan önce uygular. Yeni bir sayfa üretildiğinde bu iki dosya ve ortak üst/alt alan eklenmelidir. `js/site.js` hem ana sayfanın hem içerik sayfalarının menü ve tema etkileşimlerini yürütür.

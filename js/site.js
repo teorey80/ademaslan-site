@@ -24,16 +24,20 @@
       b.addEventListener('click', function () { window.AATheme.toggleTheme(); });
     });
 
+    document.querySelectorAll('.aa-menu a').forEach(function (a) {
+      if (a.pathname === location.pathname && !a.hash) a.setAttribute('aria-current', 'page');
+    });
+
     // Mobil menü
     var toggle = document.querySelector('[data-nav-toggle]');
-    var links = document.querySelector('.nav-links');
-    if (toggle && links) {
+    var menuLinks = document.querySelector('.aa-menu, .nav-links');
+    if (toggle && menuLinks) {
       toggle.setAttribute('aria-expanded', 'false');
-      function closeMenu() { links.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Menüyü aç'); }
-      links.addEventListener('click', function (e) { if (e.target.closest('a')) closeMenu(); });
-      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && links.classList.contains('open')) { closeMenu(); toggle.focus(); } });
+      function closeMenu() { menuLinks.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Menüyü aç'); }
+      menuLinks.addEventListener('click', function (e) { if (e.target.closest('a')) closeMenu(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menuLinks.classList.contains('open')) { closeMenu(); toggle.focus(); } });
       toggle.addEventListener('click', function () {
-        var open = links.classList.toggle('open');
+        var open = menuLinks.classList.toggle('open');
         toggle.setAttribute('aria-expanded', String(open));
         toggle.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
       });

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" data-brand="editorial" data-theme="light" data-accent="editorial">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -268,19 +268,29 @@ table.units td:first-child{font-weight:600;color:var(--ink);font-family:var(--se
 .cat-tabs button[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
 .list-lead{max-width:62ch;color:var(--soft-ink);font-size:1.12rem;line-height:1.6}
 </style>
+<link rel="stylesheet" href="/css/brand.css?v=20260926-2">
+<script src="/js/theme-init.js?v=20260926-2"></script>
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap">
-    <a class="logo" href="/"><img src="/assets/logo-adem-aslan.png" alt="Adem Aslan"></a>
-    <nav class="nav">
+<header class="aa-header">
+  <div class="aa-header-inner">
+    <a class="aa-brand" href="/" aria-label="Adem Aslan — Anasayfa"><span class="aa-wordmark">adem aslan<span>.</span></span><span class="aa-brand-caption">GAYRİMENKUL · BİLGİ · DENEYİM</span></a>
+    <nav class="aa-menu" id="aa-menu" aria-label="Ana menü">
       <a href="/rehberler">Rehberler</a>
+      <a href="/#videolar">Videolar</a>
       <a href="/projeler">Proje İncelemeleri</a>
       <a href="/portfoy">Portföy</a>
-      <a href="/#sorular">Soru-Cevap</a>
+      <a href="/#araclar">Araçlar</a>
       <a href="/hakkimda">Hakkımda</a>
     </nav>
-    <a class="btn btn-primary" href="/#iletisim">Dürüst fikir alın</a>
+    <div class="aa-header-actions">
+      <button class="aa-icon" data-theme-toggle aria-label="Tema değiştir">
+        <svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+      </button>
+      <a class="aa-contact" href="/#iletisim">İletişime geç</a>
+      <button class="aa-icon aa-menu-toggle" data-nav-toggle aria-label="Menüyü aç" aria-expanded="false" aria-controls="aa-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
   </div>
 </header>
 <main id="article" style="display:block">
@@ -370,42 +380,14 @@ table.units td:first-child{font-weight:600;color:var(--ink);font-family:var(--se
     </div>
   </div>
 </main>
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <img class="flogo" src="/assets/logo-adem-aslan.png" alt="Adem Aslan">
-        <p>Çekmeköy ve Alemdağ gayrimenkulünde bağımsız, güncel ve dürüst kaynak.</p>
-      </div>
-      <div>
-        <h5>İçerik tipleri</h5>
-        <ul>
-          <li><a href="/rehberler?kategori=bolge">Bölge Rehberleri</a></li>
-          <li><a href="/projeler">Proje İncelemeleri</a></li>
-          <li><a href="/rehberler?kategori=alici">Alıcı Rehberleri</a></li>
-          <li><a href="/rehberler">Rehberler / Blog</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>İletişim</h5>
-        <ul>
-          <li><a href="tel:+905322074087">+90 532 207 40 87</a></li>
-          <li><a href="https://wa.me/905322074087" target="_blank" rel="noopener">WhatsApp</a></li>
-          <li><a href="https://instagram.com/ademaslan.official" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="https://www.threads.com/@ademaslan.official" target="_blank" rel="noopener">Threads</a></li>
-          <li><a href="https://www.youtube.com/@ademaslan.official" target="_blank" rel="noopener">YouTube</a></li>
-        <li><a href="https://www.tiktok.com/@ademaslan.official" target="_blank" rel="noopener">TikTok</a></li>
-          <li><a href="mailto:teorey@gmail.com">teorey@gmail.com</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Adem Aslan Gayrimenkul Danışmanlığı</span>
-      <a href="/tasarim-sistemi">Tasarım Sistemi →</a>
-    </div>
-  </div>
-</footer>
+<footer class="aa-footer" id="iletisim"><div class="aa-footer-inner"><div class="aa-footer-grid">
+  <div><a class="aa-brand" href="/" aria-label="Adem Aslan — Anasayfa"><span class="aa-wordmark">adem aslan<span>.</span></span><span class="aa-brand-caption">GAYRİMENKUL · BİLGİ · DENEYİM</span></a><p>Gayrimenkulü anlamak için video anlatımlar, rehberler ve sahadan deneyim.</p><a class="aa-contact" href="https://wa.me/905322074087" target="_blank" rel="noopener">WhatsApp’ta konuşalım</a></div>
+  <div><h2>Keşfedin</h2><ul><li><a href="/rehberler">Tüm rehberler</a></li><li><a href="/#videolar">Videolar</a></li><li><a href="/cekmekoy-rehberi">Bölge rehberi</a></li><li><a href="/projeler">Proje incelemeleri</a></li><li><a href="/portfoy">Güncel portföy</a></li></ul></div>
+  <div><h2>Karar vermeden önce</h2><ul><li><a href="/rehberler/ev-almadan-once-7-kontrol/">Ev almadan önce 7 kontrol</a></li><li><a href="/rehberler/tapu-takyidat-sorgulama/">Tapu kaydını sorgulama</a></li><li><a href="/rehberler/deger-artisi-vergisi-hesaplama/">Vergi hesaplama aracı</a></li><li><a href="/hakkimda">Beni tanıyın</a></li></ul></div>
+  <div><h2>İletişim & sosyal medya</h2><ul><li><a href="tel:+905322074087">+90 532 207 40 87</a></li><li><a href="mailto:adem@ademaslan.com">adem@ademaslan.com</a></li><li><a href="https://www.youtube.com/@ademaslan.official" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://instagram.com/ademaslan.official" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.threads.com/@ademaslan.official" target="_blank" rel="noopener">Threads</a></li><li><a href="https://www.tiktok.com/@ademaslan.official" target="_blank" rel="noopener">TikTok</a></li></ul></div>
+</div><div class="aa-footer-bottom"><span>© 2026 Adem Aslan Gayrimenkul Danışmanlığı</span><a href="/#kesfet">İçerikleri keşfet ↗</a></div></div></footer>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Tapu Devrinde Yapılan 10 Kritik Hata: Geri Dönüşü Zor, Pahalıya Patlar", "description": "Düşük bedel beyanından sözleşmesiz kaporaya, takyidat kontrolünden sahte vekalete — tapu devrinde en sık yapılan 10 kritik hata ve her birinden nasıl korunacağınız.", "image": "https://ademaslan.com/assets/rehber-tapu-10-hata.jpg", "author": {"@type": "Person", "name": "Adem Aslan", "url": "https://ademaslan.com/hakkimda"}, "publisher": {"@type": "Organization", "name": "Nest Life Gayrimenkul", "url": "https://ademaslan.com"}, "datePublished": "2026-07-13T09:00:00+00", "dateModified": "2026-07-13T09:00:00+00", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://ademaslan.com/rehberler/tapu-devrinde-10-kritik-hata/"}, "url": "https://ademaslan.com/rehberler/tapu-devrinde-10-kritik-hata/", "inLanguage": "tr"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "tr", "mainEntity": [{"@type": "Question", "name": "Tapuda düşük bedel gösterirsem ne olur?", "acceptedAnswer": {"@type": "Answer", "text": "Tespit halinde eksik yatırılan tapu harcı cezasıyla birlikte tahsil edilir. Ayrıca 5 yıl içinde satarsanız, alış-satış farkı tapu değerleri üzerinden hesaplandığı için yüksek değer artış kazancı vergisi çıkar. Güvenli Ödeme Sistemi de yalnızca beyan edilen tutarı korur."}}, {"@type": "Question", "name": "Kapora iade edilir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Yazılı anlaşmanıza bağlıdır. Sözleşmesiz ve elden verilen kaporanın iadesi fiilen çok zordur; bu yüzden kaporayı dekontla ödeyin ve iade şartlarını yazılı ön anlaşmaya bağlayın."}}, {"@type": "Question", "name": "Tapu masraflarını kim öder?", "acceptedAnswer": {"@type": "Answer", "text": "Yasal olarak tapu harcı alıcı ve satıcıdan ayrı ayrı alınır; uygulamada taraflar farklı anlaşabilir. Döner sermaye ücreti ve emlak hizmet bedeli de eklenince, tüm kalemleri devir gününden önce yazılı netleştirmek gerekir."}}, {"@type": "Question", "name": "Hisseli tapu almak riskli mi?", "acceptedAnswer": {"@type": "Answer", "text": "Ek dikkat gerektirir: diğer hissedarların ön alım (şufa) hakkı vardır ve kullanım konusunda anlaşmazlık çıkabilir. Hisseli taşınmazda mutlaka uzman desteğiyle ilerleyin."}}], "@id": "https://ademaslan.com/rehberler/tapu-devrinde-10-kritik-hata/#faq", "url": "https://ademaslan.com/rehberler/tapu-devrinde-10-kritik-hata/"}</script>
+<script src="/js/site.js?v=20260926-2"></script>
 </body>
 </html>
