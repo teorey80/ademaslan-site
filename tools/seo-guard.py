@@ -157,13 +157,14 @@ def enrich_entity(path: str, h: str) -> str:
 
 
 def ensure_trailing_slash(path: str, h: str) -> str:
-    """Alt dizin canonical/og:url değerleri yayınlanan URL ile eşleşsin."""
+    """Alt dizin canonical/og:url/JSON-LD değerleri yayınlanan URL ile eşleşsin."""
     slug = path.rsplit("/index.html", 1)[0]
     bare = f"{SITE}/{slug}"
     out = h.replace(f'content="{bare}"', f'content="{bare}/"')
     out = out.replace(f'href="{bare}"', f'href="{bare}/"')
+    out = out.replace(f'"{bare}"', f'"{bare}/"')
     if out != h:
-        fixes.append(f"{path}: canonical/og:url sondaki eğik çizgi")
+        fixes.append(f"{path}: canonical/og:url/JSON-LD sondaki eğik çizgi")
     return out
 
 

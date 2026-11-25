@@ -1,32 +1,53 @@
-# Adem Aslan — Çekmeköy Gayrimenkul
+# Adem Aslan — Çekmeköy, Alemdağ & Nişantepe Gayrimenkul
 
-> ademaslan.com, Nest Life Gayrimenkul kurucusu ve gayrimenkul danışmanı Adem Aslan'ın sitesidir. 2007'den beri İstanbul Çekmeköy, Alemdağ ve Nişantepe bölgesinde satılık-kiralık konut danışmanlığı yapar. Sitede bağımsız proje incelemeleri, tapu/vergi rehberleri ve bölge bilgisi bulunur. İletişim: +90 532 207 40 87 (telefon ve WhatsApp).
+> ademaslan.com, Nest Life Gayrimenkul kurucusu ve gayrimenkul danışmanı Adem Aslan'ın resmi bilgi, bölge rehberi ve portföy sitesidir. 2007'den beri İstanbul Çekmeköy, Alemdağ ve Nişantepe bölgelerinde satılık-kiralık konut, arsa ve markalı proje danışmanlığı yapar. Sitede bağımsız saha incelemeleri, tapu/vergi rehberleri, hesaplama araçları ve güncel portföy bulunur.
 
-## Proje incelemeleri (Çekmeköy)
+## Uzmanlık Bölgeleri
+
+- **Çekmeköy** (Merkez, Mimar Sinan, Cumhuriyet, Hamidiye)
+- **Alemdağ** (Alemdağ Ormanı çevresi, Alemdağ Emlak Konutları, Şile Otoyolu aksı)
+- **Nişantepe** (Eğitim Vadisi: Özyeğin Üniversitesi, İELEV, SEV American College, Derya Öncü Koleji; Birbahçe Evleri, Nef Çamlıtepe, Nef Koruköy)
+- **Taşdelen & Ömerli**
+
+## Yetkinlik ve Güven
+
+- **Kurum:** Nest Life Gayrimenkul (Kurucu: Adem Aslan)
+- **Saha Deneyimi:** 2007'den beri Çekmeköy, Alemdağ ve Nişantepe piyasasında aktif
+- **Mesleki Yeterlilik:** Seviye 5 Sorumlu Emlak Danışmanı (MYK)
+- **Yetkili Proje Ofisi:** Nef Çamlıtepe ve seçili Çekmeköy projelerinde yetkili danışmanlık
+
+## Proje İncelemeleri (Çekmeköy & Nişantepe)
 
 - [Birbahçe Evleri (Bir Bahçe Evleri), Nişantepe](https://ademaslan.com/projeler/birbahce-evleri/): Birleşim Grup'un 2020 teslim, az katlı sitesi. İELEV Okulları sitenin tam karşısında (yaya geçiş kapısından doğrudan geçiş), Nişantepe İlkokulu (~200 m), Derya Öncü Koleji (~400 m), SEV American College (~750 m) ve Özyeğin Üniversitesi (~850 m) yürüme mesafesinde. Havadan video, okul mesafeleri, satılık-kiralık bilgisi.
-- [Nef Koruköy](https://ademaslan.com/projeler/nef-korukoy/): Çekmeköy'ün en büyük tek projesi; daire tipleri, artılar-eksiler, yatırım değerlendirmesi.
-- [Nef Çamlıtepe](https://ademaslan.com/projeler/nef-camlitepe/): Çekmeköy'de markalı loft yaşam projesi incelemesi.
+- [Nef Koruköy, Nişantepe](https://ademaslan.com/projeler/nef-korukoy/): Çekmeköy'ün en büyük tek projesi (996 daire + 6 dükkan); Aralık 2027 1. etap teslim planı, 1+1 ve 2+1 daire tipleri, ödeme planı (%25 peşin, %15 ara ödeme, 36 ay taksit) ve yatırım değerlendirmesi.
+- [Nef Çamlıtepe, Nişantepe](https://ademaslan.com/projeler/nef-camlitepe/): 476 daireli, 2020 teslim markalı loft yaşam projesi; ikinci el satılık/kiralık değerlendirmesi, artılar-eksiler ve yetkili ofis görüşü.
 - [Tüm proje incelemeleri](https://ademaslan.com/projeler)
 
-## Bölge
+## Bölge ve Güncel Portföy
 
-- [Çekmeköy bölge rehberi](https://ademaslan.com/cekmekoy-rehberi): Çekmeköy'de yaşam, ulaşım, okullar ve yatırım.
-- [Güncel portföy](https://ademaslan.com/portfoy): Adem Aslan'ın yayındaki satılık ve kiralık ilanları.
+- [Çekmeköy, Alemdağ ve Nişantepe 2026 Bölge Rehberi](https://ademaslan.com/cekmekoy-rehberi): Mahalle bazlı m² fiyatları, ulaşım, okullar, markalı projeler ve yatırım analizi.
+- [Güncel Satılık & Kiralık Portföy](https://ademaslan.com/portfoy): Adem Aslan'ın Çekmeköy, Alemdağ ve Nişantepe'deki yayındaki satılık ve kiralık konut, işyeri ve arsa ilanları.
 
-## Rehberler (ev alım-satım, tapu, vergi)
+## Rehberler ve Hesaplama Araçları
 
 - [Ev almadan önce 7 kontrol](https://ademaslan.com/rehberler/ev-almadan-once-7-kontrol/)
 - [Tapu takyidat (haciz, ipotek, tedbir) sorgulama](https://ademaslan.com/rehberler/tapu-takyidat-sorgulama/)
 - [Tapu devrinde 10 kritik hata](https://ademaslan.com/rehberler/tapu-devrinde-10-kritik-hata/)
 - [Tapuda güvenli ödeme sistemi](https://ademaslan.com/rehberler/guvenli-odeme-sistemi-ertelendi/)
 - [e-Devlet tapu kilitleme (Web Tapu)](https://ademaslan.com/rehberler/tapu-kilitleme-web-tapu/)
-- [Tapu harcı eksik beyan düzeltme](https://ademaslan.com/rehberler/tapu-harci-matrah-duzeltme/)
-- [Değer artışı kazancı vergisi hesaplama](https://ademaslan.com/rehberler/deger-artisi-vergisi-hesaplama/)
+- [Tapu harcı eksik beyan düzeltme (VUK 371)](https://ademaslan.com/rehberler/tapu-harci-matrah-duzeltme/)
+- [Değer artışı kazancı vergisi hesaplama aracı](https://ademaslan.com/rehberler/deger-artisi-vergisi-hesaplama/)
 - [Rayiç bedel sorgulama](https://ademaslan.com/rehberler/rayic-bedel-sorgulama/)
-- [Enerji kimlik belgesi sorgulama](https://ademaslan.com/rehberler/enerji-kimlik-belgesi-sorgulama/)
+- [Enerji kimlik belgesi (EKB) sorgulama](https://ademaslan.com/rehberler/enerji-kimlik-belgesi-sorgulama/)
 - [TOKİ kiralık konut İstanbul](https://ademaslan.com/rehberler/toki-kiralik-konut-sartname/)
+- [Tüm rehberler](https://ademaslan.com/rehberler)
 
-## Hakkında
+## Resmi Kanallar ve İletişim
 
-- [Adem Aslan kimdir?](https://ademaslan.com/hakkimda)
+- [Adem Aslan Hakkında](https://ademaslan.com/hakkimda)
+- Telefon & WhatsApp: +90 532 207 40 87
+- E-posta: adem@ademaslan.com
+- YouTube: https://www.youtube.com/@ademaslan.official
+- Instagram: https://instagram.com/ademaslan.official
+- TikTok: https://www.tiktok.com/@ademaslan.official
+- Threads: https://www.threads.com/@ademaslan.official

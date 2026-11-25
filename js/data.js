@@ -91,7 +91,7 @@
       type: typeStr,
       category: cat,
       price: Number(row.price) || 0,
-      currency: row.currency || 'TRY',
+      currency: (function(c){ var s = String(c || 'TRY').trim().toUpperCase(); return (s === 'TL' || s === '₺' || !/^[A-Z]{3}$/.test(s)) ? 'TRY' : s; })(row.currency),
       badge: badge(listingStatus, row.created_at),
       bedrooms: pick(row, 'rooms', null, cat === 'KONUT' ? '—' : ''),
       bathrooms: row.bathrooms || 0,
